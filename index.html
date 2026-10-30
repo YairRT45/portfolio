@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramiro Yair Román Trejo | Ingeniero de Software — Backend & DevOps Junior</title>
+  <meta name="description" content="Portafolio profesional de Ramiro Yair Román Trejo. Ingeniero de Software especializado en Backend (Python/Django), DevOps (Docker, Linux, CI/CD, Observabilidad con Prometheus/Grafana) y QA.">
+  
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://roman-mx.tech/">
+  <meta property="og:title" content="Ramiro Yair Román Trejo | Ingeniero de Software — Backend & DevOps Junior">
+  <meta property="og:description" content="Portafolio profesional de Ramiro Yair Román Trejo. Especializado en Backend (Python/Django/FastAPI), DevOps (Docker, Linux, CI/CD), Observabilidad (Prometheus/Grafana) y Fundamentos de Ciencias de la Computación.">
+  <meta property="og:image" content="https://roman-mx.tech/logo.svg">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://roman-mx.tech/">
+  <meta name="twitter:title" content="Ramiro Yair Román Trejo | Ingeniero de Software">
+  <meta name="twitter:description" content="Especializado en Backend (Python/Django/FastAPI), DevOps (Docker, Linux, CI/CD), Observabilidad y CS.">
+  <meta name="twitter:image" content="https://roman-mx.tech/logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            accent: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            },
+            dark: {
+              950: '#070b12',
+              900: '#0c121e',
+              850: '#111828',
+              800: '#182238',
+              700: '#22304e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .glow-brand {
+      box-shadow: 0 0 40px -8px rgba(16, 185, 129, 0.22);
+    }
+    .glow-accent {
+      box-shadow: 0 0 40px -8px rgba(14, 165, 233, 0.22);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070b12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+
+<body class="bg-dark-950 text-slate-200 font-sans selection:bg-brand-500 selection:text-white antialiased min-h-screen relative">
+  <!-- Ambient background gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute -top-40 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -right-20 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-950/85 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-2 group">
+        <div class="flex items-center justify-center transition-all group-hover:drop-shadow-[0_0_12px_rgba(6,253,236,0.6)] shrink-0">
+          <svg class="h-7 sm:h-8 w-auto" viewBox="180 350 660 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#06FDEC" d="M519.195 368.39C523.686 368.508 528.185 368.512 532.677 368.509C569.92 368.479 607.163 368.356 644.406 368.366C663.076 368.37 681.776 368.197 700.446 368.482C713.681 368.683 727.689 371.929 739.451 378.052C745.932 381.425 753.12 386.275 758.68 391.043C775.126 405.147 785.161 430.113 786.043 451.495C786.592 464.798 784.231 476.562 779.22 488.867C772.5 505.371 761.145 517.421 746.005 526.677C736.746 532.337 725.025 536.683 714.125 537.458C715.001 538.609 715.919 539.728 716.918 540.774C720.877 544.918 724.957 548.943 728.895 553.109C735.152 559.728 741.668 566.077 748.041 572.581C756.576 581.289 765.215 589.922 773.567 598.805C782.806 608.629 792.556 617.942 801.959 627.601C801.96 627.603 802.73 628.402 802.731 628.403C807.576 633.451 812.361 638.557 817.195 643.614C817.196 643.616 817.771 644.212 817.772 644.214C821.414 647.957 825.205 651.552 828.843 655.299L735.814 655.161C734.956 654.43 734.172 653.661 733.386 652.852C725.088 644.319 717.754 636.674 708.898 627.847C699.087 618.066 689.51 608.081 679.856 598.146C671.492 589.539 663.232 580.82 654.786 572.295C645.263 562.684 636.01 552.802 626.459 543.22C625.431 542.189 624.373 541.184 623.202 540.317L592.496 540.211L592.644 655.151L523.195 655.248C523.082 645.846 523.21 636.438 523.161 627.035C522.998 595.619 522.717 564.212 522.986 532.795C522.986 532.793 523.002 531.269 523.002 531.268C523.093 524.68 523.1 518.093 523.184 511.505C523.989 510.3 524.915 509.18 525.931 508.145C531.165 502.811 536.623 497.685 541.912 492.403C546.548 487.772 550.95 482.865 555.703 478.362C592.984 478.259 630.268 478.313 667.55 478.254C677.139 478.239 686.747 478.357 696.334 478.203C702.812 478.098 709.14 474.641 713.243 469.68C717.767 464.211 719.053 458.571 718.82 451.613C718.557 443.732 714.351 436.14 707.541 432.037C703.488 429.595 700.306 428.554 695.629 428.52C695.628 428.52 694.456 428.516 694.454 428.516C661.01 428.522 627.566 428.655 594.122 428.599C589.173 428.59 584.182 428.756 579.238 428.534C578.028 427.65 576.919 426.642 575.847 425.596C571.325 421.185 566.978 416.606 562.569 412.086C552.08 401.334 541.479 390.68 530.888 380.028C527.026 376.144 523.216 372.103 519.195 368.39Z"/>
+            <defs>
+              <linearGradient id="nav_logo_gradient" gradientUnits="userSpaceOnUse" x1="370.39819" y1="348.87704" x2="320.94748" y2="670.1051">
+                <stop offset="0" stop-color="#07FFE3"/>
+                <stop offset="1" stop-color="#04F8F7"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#nav_logo_gradient)" d="M430.248 368.112L501.345 368.416C501.366 370.614 501.356 372.814 501.364 375.012C501.57 431.718 501.189 488.425 501.327 545.131C501.327 545.133 501.335 547.596 501.335 547.598C501.348 550.652 501.363 553.707 501.387 556.762C501.534 575.496 501.709 594.226 501.783 612.961C500.479 614.57 498.917 615.944 497.425 617.38C497.424 617.381 496.769 618.013 496.768 618.015C489.915 624.71 483.226 631.572 476.479 638.374C472.206 642.68 468.113 647.162 463.833 651.455C462.815 652.477 461.793 653.502 460.661 654.395C460.66 654.396 459.8 655.065 459.799 655.066L218.68 655.273L275.23 597.368L430.281 597.392L430.397 540.164L363.245 540.295C361.198 538.924 359.465 537.142 357.719 535.404C353.745 531.447 349.856 527.392 345.947 523.371C334.804 511.905 323.488 500.599 312.418 489.064C295.873 471.823 278.81 455.085 262.335 437.779C245.512 420.107 228.026 403.068 211.041 385.553C205.554 379.893 199.738 374.431 194.764 368.312L286.865 368.449C290.447 371.347 294.787 376.133 298.18 379.471C298.182 379.472 298.567 379.855 298.568 379.856C301.225 382.534 303.895 385.2 306.532 387.897C312.014 393.504 317.638 398.979 323.088 404.615C331.696 413.518 340.458 422.283 348.975 431.272C356.105 438.797 363.536 445.981 370.891 453.279C370.892 453.28 371.649 454.037 371.65 454.039C373.435 455.831 375.194 457.648 376.958 459.461C383.077 465.755 389.004 472.316 395.377 478.354L430.409 478.543L430.248 368.112Z"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-mono font-semibold tracking-tight text-slate-100 group-hover:text-brand-400 transition-colors text-sm">
+            roman-mx.tech
+          </span>
+          <span class="text-[10px] text-slate-500 font-mono -mt-1 hidden sm:block">Backend & DevOps</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-xs font-mono uppercase tracking-wider text-slate-400">
+        <a href="#experiencia" class="hover:text-brand-400 transition-colors" data-i18n="nav_exp">Experiencia</a>
+        <a href="#habilidades" class="hover:text-brand-400 transition-colors" data-i18n="nav_skills">Habilidades</a>
+        <a href="#proyectos" class="hover:text-brand-400 transition-colors" data-i18n="nav_projects">Proyectos</a>
+        <a href="#educacion" class="hover:text-brand-400 transition-colors" data-i18n="nav_edu">Educación</a>
+        <a href="#contacto" class="hover:text-brand-400 transition-colors" data-i18n="nav_contact">Contacto</a>
+      </nav>
+
+      <!-- Action buttons -->
+      <div class="flex items-center gap-2">
+        <!-- Language Toggle (ES / EN) -->
+        <div class="flex items-center bg-dark-850 border border-slate-800 rounded-lg p-0.5 text-xs font-mono mr-1 shadow-sm">
+          <button id="lang-es" onclick="setLanguage('es')" class="cursor-pointer px-2 py-1 rounded text-brand-400 font-bold bg-dark-800 transition-all" title="Español">ES</button>
+          <button id="lang-en" onclick="setLanguage('en')" class="cursor-pointer px-2 py-1 rounded text-slate-400 hover:text-white transition-all" title="English">EN</button>
+        </div>
+        <a href="https://www.linkedin.com/in/ramiro-yair-rom%C3%A1n-trejo-1bb164383/" target="_blank" rel="noopener noreferrer" 
+           class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-sky-400 transition-all shrink-0"
+           title="LinkedIn: Ramiro Yair Román Trejo">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://github.com/YairRT45"  target="_blank" rel="noopener noreferrer" 
+           class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all shrink-0"
+           title="GitHub: @YairRT45">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://gitlab.com/ryrt32" target="_blank" rel="noopener noreferrer" 
+           class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-orange-400 transition-all shrink-0"
+           title="GitLab: @ryrt32">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22.65 14.39L20 5.41a.5.5 0 0 0-.95-.14l-2.47 7.55H7.42L4.95 5.27a.5.5 0 0 0-.95.14l-2.65 8.98a.5.5 0 0 0 .18.53l10.15 7.42a.5.5 0 0 0 .6 0l10.15-7.42a.5.5 0 0 0 .19-.53z"/></svg>
+        </a>
+        <a href="mailto:ryrt32@gmail.com" 
+           class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-brand-400 transition-all shrink-0"
+           title="Enviar Email">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+        </a>
+        <a href="#contacto" 
+           class="h-9 inline-flex items-center gap-1.5 px-3.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-dark-950 font-bold text-xs transition-colors shadow-sm shrink-0">
+          <span data-i18n="nav_btn_contact">Contacto</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a></div>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-14 pb-16 md:pt-20 md:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Intro text -->
+        <div class="lg:col-span-7 space-y-5">
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-brand-500/30 text-xs font-mono text-slate-300">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+            </span>
+            <span data-i18n="hero_badge">Ingeniero de Software | <strong class="text-brand-400">Backend</strong> & <strong class="text-accent-400">DevOps Junior</strong></span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Ramiro Yair <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-emerald-300 to-accent-400">Román Trejo</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal" data-i18n="hero_p1">
+            Especializado en <strong class="text-white">desarrollo backend (Python / Django / FastAPI)</strong> y <strong class="text-white">prácticas DevOps</strong> (Docker, Linux, CI/CD). Con sólidos fundamentos en <span class="text-indigo-400 font-mono text-sm font-medium">Ciencias de la Computación</span> (estructuras de datos, algoritmos y grafos), experiencia en plataformas empresariales, pipelines de <span class="text-emerald-400 font-mono text-sm font-medium">Visión por Computadora (YOLO)</span> y observabilidad con <span class="text-accent-400 font-mono text-sm font-medium">Prometheus/Grafana</span>.
+          </p>
+
+          <p class="text-sm text-slate-400 leading-relaxed" data-i18n="hero_p2">
+            Capacidad demostrada para digitalizar procesos operativos críticos en entornos industriales (como <strong class="text-slate-200">Grupo Modelo / Compañía Cervecera de Zacatecas</strong>) y académicos de alta exigencia.
+          </p>
+
+          <!-- Contact bar pills -->
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400 pt-1">
+            <span class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-dark-850 border border-slate-800">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="hero_loc">Pozo de Gamboa, Zacatecas, MX</span>
+            </span>
+            <a href="tel:+524921819531" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-dark-850 border border-slate-800 hover:text-emerald-400 transition-colors">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> +52 492 181 9531
+            </a>
+            <a href="mailto:ryrt32@gmail.com" class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-dark-850 border border-slate-800 hover:text-brand-400 transition-colors">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-accent-400"></i> ryrt32@gmail.com
+            </a>
+            <span class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-dark-850 border border-slate-800">
+              <i data-lucide="languages" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="hero_langs">Inglés B1 | Español Nativo</span>
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-3">
+            <a href="mailto:ryrt32@gmail.com" 
+               class="px-5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-dark-950 font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-brand-500/20">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span data-i18n="hero_btn_contact">Contactar Directo</span>
+            </a>
+            <a href="CV_Ramiro_Yair_Roman_Trejo.pdf" download="CV_Ramiro_Yair_Roman_Trejo.pdf"
+               class="px-5 py-2.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-brand-500/40 text-brand-400 hover:text-brand-300 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span data-i18n="hero_btn_cv">Descargar CV</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ramiro-yair-rom%C3%A1n-trejo-1bb164383/" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-2.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-700 text-slate-200 hover:text-sky-400 font-semibold text-sm transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current inline-block text-sky-400" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/YairRT45" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-2.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-700 text-slate-200 font-semibold text-sm transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current inline-block text-slate-400" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://gitlab.com/ryrt32" target="_blank" rel="noopener noreferrer" 
+               class="px-4 py-2.5 rounded-lg bg-dark-850 hover:bg-dark-800 border border-slate-700 text-slate-200 font-semibold text-sm transition-all flex items-center gap-2 hover:border-orange-500/50">
+              <svg class="w-4 h-4 fill-orange-400" viewBox="0 0 24 24"><path d="M22.65 14.39L20 5.41a.5.5 0 0 0-.95-.14l-2.47 7.55H7.42L4.95 5.27a.5.5 0 0 0-.95.14l-2.65 8.98a.5.5 0 0 0 .18.53l10.15 7.42a.5.5 0 0 0 .6 0l10.15-7.42a.5.5 0 0 0 .19-.53z"/></svg>
+              <span>GitLab</span>
+            </a>
+            <button onclick="copiarEmail()" id="btn-copy-email"
+               class="px-4 py-2.5 rounded-lg bg-slate-900/60 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 text-sm transition-all flex items-center gap-2">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span id="copy-text" data-i18n="hero_btn_copy">Copiar Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Terminal with CV Profile -->
+        <div class="lg:col-span-5">
+          <div class="rounded-xl border border-slate-800 bg-dark-900/90 shadow-2xl backdrop-blur-sm overflow-hidden glow-brand">
+            <!-- Terminal Header -->
+            <div class="px-4 py-3 bg-dark-950 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+              </div>
+              <div class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                <i data-lucide="terminal" class="w-3.5 h-3.5 text-brand-400"></i>
+                <span>ramiro@dev-env:~</span>
+              </div>
+              <span class="text-[10px] font-mono text-slate-500">bash</span>
+            </div>
+
+            <!-- Terminal Body -->
+            <div class="p-5 font-mono text-xs leading-relaxed space-y-4 text-slate-300">
+              <div>
+                <p class="text-slate-500" data-i18n="term_comment"># Datos del Candidato</p>
+                <p class="text-brand-400" data-i18n="term_cat">$ cat perfil.json</p>
+                <div class="mt-1 pl-3 border-l-2 border-slate-800 text-slate-300 space-y-1">
+                  <p><span class="text-slate-500" data-i18n="term_k_name">"nombre":</span> "Ramiro Yair Román Trejo",</p>
+                  <p><span class="text-slate-500" data-i18n="term_k_title">"titulo":</span> <span data-i18n="term_title_val">"Ing. Software | Backend & DevOps"</span>,</p>
+                  <p><span class="text-slate-500" data-i18n="term_k_uni">"universidad":</span> <span data-i18n="term_v_uni">"UAZ (2022 - Presente)"</span>,</p>
+                  <p><span class="text-slate-500">"email":</span> "ryrt32@gmail.com",</p>
+                  <p><span class="text-slate-500" data-i18n="term_k_phone">"telefono":</span> "+52 492 181 9531"</p>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-brand-400" data-i18n="term_status_cmd">$ systemctl status engineering-stack</p>
+                <div class="mt-1 text-[11px] text-slate-400 bg-dark-950/80 p-2.5 rounded border border-slate-800/80 space-y-1">
+                  <p class="text-emerald-400" data-i18n="term_st1">● backend.service - active [Django 5, FastAPI & DRF]</p>
+                  <p class="text-sky-400" data-i18n="term_st2">● mobile-apps - active [Flutter/Dart Fitosanitario & Kotlin/Room]</p>
+                  <p class="text-cyan-400" data-i18n="term_st3">● docker-compose - polyglot mesh [Postgres, Mongo, MariaDB]</p>
+                  <p class="text-purple-400" data-i18n="term_st4">● jenkins-ci - pipeline passing [Behave BDD + Selenium]</p>
+                  <p class="text-amber-400" data-i18n="term_st5">● prometheus-grafana - telemetría en vivo [cAdvisor + Node]</p>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-brand-400">$ echo $VALUE_PROPOSITION</p>
+                <p class="text-slate-400 pl-3 border-l-2 border-brand-500/50 mt-1 italic">
+                  <span data-i18n="term_val_prop">"Desarrollo backend seguro y trazable, despliegues reproducibles en Linux y observabilidad en tiempo real para entornos productivos."</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Barra de Especialidades Técnicas (Diseño Uniforme) -->
+    <section class="py-6 border-y border-slate-800/80 mb-20 bg-dark-900/40">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        
+        <!-- Item 1: Backend -->
+        <div class="p-4 rounded-xl bg-dark-900/80 border border-slate-800/90 hover:border-brand-500/40 transition-all flex flex-col items-center justify-center text-center group">
+          <div class="flex items-center gap-2 mb-1">
+            <i data-lucide="server" class="w-4 h-4 text-brand-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-sm sm:text-base font-bold text-white tracking-tight">Python & Django</span>
+          </div>
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider" data-i18n="spec_b_sub">Backend & APIs REST</span>
+        </div>
+
+        <!-- Item 2: DevOps -->
+        <div class="p-4 rounded-xl bg-dark-900/80 border border-slate-800/90 hover:border-accent-500/40 transition-all flex flex-col items-center justify-center text-center group">
+          <div class="flex items-center gap-2 mb-1">
+            <i data-lucide="box" class="w-4 h-4 text-accent-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-sm sm:text-base font-bold text-white tracking-tight">Docker & Linux</span>
+          </div>
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider" data-i18n="spec_d_sub">Contenedores & Bash</span>
+        </div>
+
+        <!-- Item 3: Observabilidad -->
+        <div class="p-4 rounded-xl bg-dark-900/80 border border-slate-800/90 hover:border-emerald-500/40 transition-all flex flex-col items-center justify-center text-center group">
+          <div class="flex items-center gap-2 mb-1">
+            <i data-lucide="activity" class="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-sm sm:text-base font-bold text-white tracking-tight">Prometheus & Grafana</span>
+          </div>
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider" data-i18n="spec_o_sub">Observabilidad & Alertas</span>
+        </div>
+
+        <!-- Item 4: QA & Testing -->
+        <div class="p-4 rounded-xl bg-dark-900/80 border border-slate-800/90 hover:border-purple-500/40 transition-all flex flex-col items-center justify-center text-center group">
+          <div class="flex items-center gap-2 mb-1">
+            <i data-lucide="shield-check" class="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-sm sm:text-base font-bold text-white tracking-tight">Testing BDD & QA</span>
+          </div>
+          <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider" data-i18n="spec_q_sub">Behave & Calidad</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experiencia" class="py-12 scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-slate-800 text-xs font-mono text-brand-400 mb-2">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+            <span data-i18n="exp_badge">Trayectoria Comprobada</span>
+          </div>
+          <h2 class="text-3xl font-bold text-white tracking-tight" data-i18n="exp_title">Experiencia Profesional</h2>
+          <p class="text-slate-400 text-sm mt-1" data-i18n="exp_desc">Impacto medible en industria cervecera, proyectos académicos y manufactura.</p>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+
+        <!-- Experiencia 1: Grupo Modelo / CCZ -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-dark-900/80 border border-slate-800 hover:border-brand-500/40 transition-all relative group">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20 font-medium">
+                <span data-i18n="job1_badge">Industria / Manufactura</span>
+              </span>
+              <h3 data-i18n="job1_role" class="text-xl font-bold text-white mt-2 group-hover:text-brand-400 transition-colors">
+                Desarrollador Web / Consultor de Software
+              </h3>
+              <p data-i18n="job1_company" class="text-sm font-semibold text-slate-300">
+                Compañía Cervecera de Zacatecas (Grupo Modelo)
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-400 sm:text-right bg-dark-950/60 px-3 py-1.5 rounded-lg border border-slate-800/80 w-fit">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 inline mr-1 text-brand-400"></i>
+              <span data-i18n="job1_date">Ago 2026 – Oct 2026</span>
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 text-sm text-slate-300 mt-4 leading-relaxed list-disc list-inside marker:text-brand-400">
+            <li data-i18n="job1_desc1">
+              <strong class="text-white">Diseñé e implementé una plataforma web centralizada</strong> para el control y trazabilidad de auditorías de herramientas y Buenas Prácticas de Operación (GOPs) de mantenimiento.
+            </li>
+            <li data-i18n="job1_desc2">
+              <strong class="text-white">Reduje tiempos de captura y seguimiento manual</strong> mediante la digitalización del flujo de inspección y generación de planes de acción en planta.
+            </li>
+            <li data-i18n="job1_desc3">
+              <strong class="text-white">Estructuré el modelo de datos relacional</strong> y las interfaces de usuario asegurando la integridad estricta de los registros operativos.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-800/60 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800">Python</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800">Django 5</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800">PostgreSQL 16</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800">Docker Compose</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job1_tag5">Trazabilidad GOPs</span>
+          </div>
+        </div>
+
+        <!-- Experiencia 2: UAZ Líder Técnico & Backend -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-dark-900/80 border border-slate-800 hover:border-accent-500/40 transition-all relative group">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-accent-500/10 text-accent-400 border border-accent-500/20 font-medium">
+                <span data-i18n="job2_badge">Liderazgo & Desarrollo</span>
+              </span>
+              <h3 data-i18n="job2_role" class="text-xl font-bold text-white mt-2 group-hover:text-accent-400 transition-colors">
+                Líder Técnico & Desarrollador Backend
+              </h3>
+              <p data-i18n="job2_company" class="text-sm font-semibold text-slate-300">
+                Universidad Autónoma de Zacatecas — Licenciatura en Lenguas Extranjeras
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-400 sm:text-right bg-dark-950/60 px-3 py-1.5 rounded-lg border border-slate-800/80 w-fit">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 inline mr-1 text-accent-400"></i>
+              <span data-i18n="job2_date">Nov 2025 – May 2026</span>
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 text-sm text-slate-300 mt-4 leading-relaxed list-disc list-inside marker:text-accent-400">
+            <li data-i18n="job2_desc1">
+              <strong class="text-white">Lideré el desarrollo integral</strong> de una plataforma web de gestión académica utilizando Python y Django.
+            </li>
+            <li data-i18n="job2_desc2">
+              <strong class="text-white">Coordiné la planificación ágil</strong> del equipo de desarrollo, asignación de requerimientos y despliegue del sistema en servidores Linux.
+            </li>
+            <li data-i18n="job2_desc3">
+              <strong class="text-white">Implementé pruebas de aceptación BDD con Behave</strong> (Behavior-Driven Development), garantizando el cumplimiento de los flujos críticos de usuario antes de la puesta en producción.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-800/60 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job2_tag1">Liderazgo Ágil / Scrum</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800">Python / Django</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job2_tag3">Servidores Linux</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800">Testing BDD (Behave)</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job2_tag5">Calidad de Software</span>
+          </div>
+        </div>
+
+        <!-- Experiencia 3: Nagakura Engineering Works QA -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-dark-900/80 border border-slate-800 hover:border-purple-500/40 transition-all relative group">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 font-medium">
+                <span data-i18n="job4_badge">Aseguramiento de Calidad (QA)</span>
+              </span>
+              <h3 data-i18n="job4_role" class="text-xl font-bold text-white mt-2 group-hover:text-purple-400 transition-colors">
+                Inspector de Aseguramiento de Calidad (QA)
+              </h3>
+              <p data-i18n="job4_company" class="text-sm font-semibold text-slate-300">
+                Nagakura Engineering Works
+              </p>
+            </div>
+            <div class="text-xs font-mono text-slate-400 sm:text-right bg-dark-950/60 px-3 py-1.5 rounded-lg border border-slate-800/80 w-fit">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 inline mr-1 text-purple-400"></i>
+              <span data-i18n="job4_date">Abr 2021 – Jul 2022</span>
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 text-sm text-slate-300 mt-4 leading-relaxed list-disc list-inside marker:text-purple-400">
+            <li data-i18n="job4_desc1">
+              <strong class="text-white">Ejecución y supervisión de protocolos</strong> de inspección dimensional y de materiales bajo estrictas tolerancias de manufactura.
+            </li>
+            <li data-i18n="job4_desc2">
+              <strong class="text-white">Detección y contención de desviaciones</strong> en líneas de producción; documentación formal de no conformidades y análisis de causa raíz (RCA) para acciones correctivas.
+            </li>
+            <li data-i18n="job4_desc3">
+              <strong class="text-white">Aseguramiento del cumplimiento de estándares</strong> de calidad y auditoría de cambios en especificaciones técnicas de materia prima.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-800/60 text-xs font-mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job4_tag1">Análisis Causa Raíz (RCA)</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job4_tag2">No Conformidades</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job4_tag3">Auditoría Técnica</span>
+            <span class="px-2 py-0.5 rounded bg-dark-950 border border-slate-800" data-i18n="job4_tag4">Tolerancias Críticas</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- Habilidades Técnicas Organizadas por Categoría del CV -->
+    <section id="habilidades" class="py-16 scroll-mt-20">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-slate-800 text-xs font-mono text-brand-400 mb-3">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+          <span data-i18n="skills_badge">Competencias Técnicas & Fundamentos</span>
+        </div>
+        <h2 class="text-3xl font-bold text-white tracking-tight" data-i18n="skills_title">Habilidades, Tecnologías & Fundamentos CS</h2>
+        <p class="text-slate-400 text-sm mt-2" data-i18n="skills_desc">Ciencias de la computación puras, arquitectura backend, infraestructura cloud, observabilidad e inteligencia artificial.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Backend & Frameworks -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-brand-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="server" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c1_title" class="text-lg font-bold text-white mb-2">Backend & APIs REST</h3>
+          <p data-i18n="sk_c1_desc" class="text-xs text-slate-400 mb-4">Lógica de servidor robusta, microservicios y APIs asíncronas.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> <span data-i18n="sk_c1_i1">Python 3.x (POO & Concurrencia)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> <span data-i18n="sk_c1_i2">Django 5.x & Django ORM</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> <span data-i18n="sk_c1_i3">Django REST Framework (DRF)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> <span data-i18n="sk_c1_i4">FastAPI (Async & Microservicios)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> <span data-i18n="sk_c1_i5">Arquitectura MVC / RESTful</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> <span data-i18n="sk_c1_i6">Spring Boot (Java) & Laravel 8</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 2: DevOps & Cloud -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-accent-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 text-accent-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="cloud" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c2_title" class="text-lg font-bold text-white mb-2">DevOps & Cloud</h3>
+          <p data-i18n="sk_c2_desc" class="text-xs text-slate-400 mb-4">Aislamiento de entornos, pipelines y despliegues seguros.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-400"></i> <span data-i18n="sk_c2_i1">Docker & Docker Compose (Multi-stack)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-400"></i> <span data-i18n="sk_c2_i2">Linux (Ubuntu Server & Bash Scripting)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-400"></i> <span data-i18n="sk_c2_i3">GitHub Actions & Jenkins CI/CD</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-400"></i> <span data-i18n="sk_c2_i4">Despliegue Remoto SSH en AWS EC2</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-400"></i> <span data-i18n="sk_c2_i5">Nginx Proxy Manager & SSL (Let's Encrypt)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-accent-400"></i> <span data-i18n="sk_c2_i6">Registros Docker Privados con Credenciales</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Observabilidad & Telemetría -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-emerald-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c3_title" class="text-lg font-bold text-white mb-2">Observabilidad & SRE</h3>
+          <p data-i18n="sk_c3_desc" class="text-xs text-slate-400 mb-4">Monitoreo continuo de hosts, contenedores y microservicios.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> <span data-i18n="sk_c3_i1">Prometheus & Alertmanager</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> <span data-i18n="sk_c3_i2">Grafana Dashboards en Tiempo Real</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> <span data-i18n="sk_c3_i3">Node Exporter (CPU, RAM, Disco, Red)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> <span data-i18n="sk_c3_i4">cAdvisor (Telemetría de Contenedores)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> <span data-i18n="sk_c3_i5">Blackbox Exporter (Sondas HTTP sintéticas)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> <span data-i18n="sk_c3_i6">Reglas de Alerta en PromQL</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Fundamentos de Ciencias de la Computación (CS) -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="binary" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c4_title" class="text-lg font-bold text-white mb-2">Fundamentos de CS & Algoritmos</h3>
+          <p data-i18n="sk_c4_desc" class="text-xs text-slate-400 mb-4">Estructuras de datos puras a bajo nivel de memoria en Java.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> <span data-i18n="sk_c4_i1">Árboles Binarios, ABB & Heaps/Montículos</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> <span data-i18n="sk_c4_i2">Grafos Dirigidos & Algoritmo de Dijkstra</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> <span data-i18n="sk_c4_i3">Compilador & Parser Sintáctico con Pilas</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> <span data-i18n="sk_c4_i4">Árboles de Expresiones (Infijo / Postfijo)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> <span data-i18n="sk_c4_i5">Procesamiento Binario de Audio (.wav)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> <span data-i18n="sk_c4_i6">Matrices 2D/3D & Álgebra de Imágenes</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 5: Inteligencia Artificial & Visión por Computadora -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-cyan-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="scan" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c5_title" class="text-lg font-bold text-white mb-2">IA & Visión por Computadora</h3>
+          <p data-i18n="sk_c5_desc" class="text-xs text-slate-400 mb-4">Entrenamiento supervisado de Deep Learning y pipelines de datos.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> <span data-i18n="sk_c5_i1">Ultralytics YOLOv8 & YOLOv5</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> <span data-i18n="sk_c5_i2">PyTorch (Deep Learning & Tensores)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> <span data-i18n="sk_c5_i3">Curación de Datasets Masivos con AgML</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> <span data-i18n="sk_c5_i4">Mapas de Calor de Atención Visual</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> <span data-i18n="sk_c5_i5">Exportación Optimizada para Inferencia</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> <span data-i18n="sk_c5_i6">Modelos Ocultos de Markov (MOM)</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 6: Criptografía & Seguridad Aplicada -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-rose-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c6_title" class="text-lg font-bold text-white mb-2">Criptografía & Seguridad</h3>
+          <p data-i18n="sk_c6_desc" class="text-xs text-slate-400 mb-4">Criptosistemas asimétricos, cifrado de flujo y criptoanálisis.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="sk_c6_i1">Criptosistema RSA Asimétrico (Sockets TCP)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="sk_c6_i2">Cifrador de Flujo RC4 (Stream Cipher)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="sk_c6_i3">Cifrado de Sustitución (Disco Alberti / César)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="sk_c6_i4">Cálculo de Entropía de Shannon & Hamming</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="sk_c6_i5">Generador de Subllaves & Hashing</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i> <span data-i18n="sk_c6_i6">Criba de Eratóstenes para Primos</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 7: Bases de Datos SQL & NoSQL -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-amber-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c7_title" class="text-lg font-bold text-white mb-2">Bases de Datos (SQL & NoSQL)</h3>
+          <p data-i18n="sk_c7_desc" class="text-xs text-slate-400 mb-4">Modelado estructurado, persistencia segura y optimización.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="sk_c7_i1">PostgreSQL 15/16 (psycopg3)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="sk_c7_i2">MariaDB & MySQL 8.0</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="sk_c7_i3">MongoDB 6 (NoSQL Document Store)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="sk_c7_i4">SQLite & Room Database (Android ORM)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="sk_c7_i5">Oracle PL/SQL (Triggers & Procedimientos)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> <span data-i18n="sk_c7_i6">Healthchecks (<code>pg_isready</code>, <code>mongosh</code>)</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 8: QA, Testing & Rigor Metodológico PSP -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-purple-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c8_title" class="text-lg font-bold text-white mb-2">QA, Testing & Metodología PSP</h3>
+          <p data-i18n="sk_c8_desc" class="text-xs text-slate-400 mb-4">Garantía estricta de calidad, validación y testing continuo.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> <span data-i18n="sk_c8_i1">Metodología PSP (Watts Humphrey / SEI)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> <span data-i18n="sk_c8_i2">Procedimientos IV&V (Verificación y Validación)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> <span data-i18n="sk_c8_i3">Testing BDD con Behave (Gherkin)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> <span data-i18n="sk_c8_i4">Selenium WebDriver (Pruebas E2E en CI)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> <span data-i18n="sk_c8_i5">Pruebas Unitarias (pytest & unittest)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> <span data-i18n="sk_c8_i6">Flake8 Linters, RCA & Metodologías Ágiles</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 9: Desarrollo Móvil & Multiplataforma (Flutter / Dart & Kotlin) -->
+        <div class="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-sky-500/50 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+            <i data-lucide="smartphone" class="w-5 h-5"></i>
+          </div>
+          <h3 data-i18n="sk_c9_title" class="text-lg font-bold text-white mb-2">Mobile & Multiplataforma</h3>
+          <p data-i18n="sk_c9_desc" class="text-xs text-slate-400 mb-4">Desarrollo nativo e híbrido con pipelines automatizados.</p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> <span data-i18n="sk_c9_i1">Flutter & Dart (Apps Multiplataforma)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> <span data-i18n="sk_c9_i2">Control Fitosanitario & Diagnóstico Agrícola</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> <span data-i18n="sk_c9_i3">SQLite FFI en Linux y Dispositivos Móviles</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> <span data-i18n="sk_c9_i4">Kotlin Nativo (Android Jetpack & MVVM)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> <span data-i18n="sk_c9_i5">Room Database (Persistencia Local Offline)</span></li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> <span data-i18n="sk_c9_i6">Google Maps API & Rutas Críticas</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="proyectos" class="py-16 scroll-mt-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-slate-800 text-xs font-mono text-brand-400 mb-3">
+            <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
+            <span data-i18n="proj_badge">Implementaciones Reales</span>
+          </div>
+          <h2 class="text-3xl font-bold text-white tracking-tight" data-i18n="proj_title">Proyectos de Ingeniería</h2>
+          <p class="text-slate-400 text-sm mt-2" data-i18n="proj_desc">Aplicaciones empresariales, automatización de infraestructura y pipelines.</p>
+        </div>
+        <a href="https://github.com/YairRT45" target="_blank" rel="noopener noreferrer" 
+           class="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors">
+          <span data-i18n="proj_explore_gh">Explorar repositorios en GitHub</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Proyecto 1: Toolkits (CCZ / Grupo Modelo) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-brand-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-brand-500/10 transition-colors"></div>
+          
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono font-medium">
+                <span data-i18n="p1_b1">Caso Real en Producción</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                Grupo Modelo / CCZ
+              </span>
+            </div>
+            <a href="https://github.com/YairRT45/toolkits" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 hover:text-white px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-slate-700 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current inline-block" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>YairRT45/toolkits</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p1_title" class="text-2xl font-bold text-white group-hover:text-brand-400 transition-colors">Plataforma Web de Auditorías & Buenas Prácticas de Operación (GOPs)</h3>
+          <p data-i18n="p1_sub" class="text-sm font-mono text-brand-400/90 mt-1 mb-4">
+            Departamento de Envasado — Compañía Cervecera de Zacatecas
+          </p>
+
+          <p data-i18n="p1_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Sistema empresarial integral para sustituir el levantamiento manual en papel por una plataforma digital centralizada. Automatiza el flujo de inspección de toolkits, trazabilidad de no conformidades, cálculo en tiempo real de metas de cumplimiento por línea y generación inmediata de planes de acción correctivos.
+          </p>
+
+          <!-- Highlights Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-brand-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="database" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p1_f1_title">Modelado & ORM Complejo</span>
+              </div>
+              <p data-i18n="p1_f1_desc" class="text-xs text-slate-400">
+                Estructura relacional con Dueños, Toolkits, Revisiones y GOPs, con métodos dinámicos de agregación para cumplimiento porcentual.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-accent-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="box" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p1_f2_title">Docker & Compose</span>
+              </div>
+              <p data-i18n="p1_f2_desc" class="text-xs text-slate-400">
+                Arquitectura desacoplada en contenedores (Django + PostgreSQL 16), gestión de volúmenes persistentes y variables de entorno aisladas.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p1_f3_title">Impacto Operativo</span>
+              </div>
+              <p data-i18n="p1_f3_desc" class="text-xs text-slate-400">
+                Reducción drástica en tiempos de captura y auditoría, trazabilidad fotográfica de fallas y asignación ágil de responsables.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Django 5.0</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">PostgreSQL 16</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Docker Compose</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">psycopg3</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Pillow</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p1_tag6">Auditoría Industrial</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Gestión Académica UAZ (Liderazgo Técnico & BDD) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono font-medium">
+                <span data-i18n="p2_b1">Liderazgo Técnico & BDD</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                <span data-i18n="p2_b2">UAZ Lenguas Extranjeras</span>
+              </span>
+            </div>
+            <a href="https://gitlab.com/ryrt32/seguimiento-programas-deploy" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 hover:text-orange-300 px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-orange-500/40 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M22.65 14.39L20 5.41a.5.5 0 0 0-.95-.14l-2.47 7.55H7.42L4.95 5.27a.5.5 0 0 0-.95.14l-2.65 8.98a.5.5 0 0 0 .18.53l10.15 7.42a.5.5 0 0 0 .6 0l10.15-7.42a.5.5 0 0 0 .19-.53z"/></svg>
+              <span>ryrt32/seguimiento-programas-deploy</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p2_title" class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Plataforma de Gestión Académica con CI/CD en Jenkins & Testing BDD</h3>
+          <p data-i18n="p2_sub" class="text-sm font-mono text-purple-400/90 mt-1 mb-4">
+            Pipeline Completo en Jenkinsfile, Pruebas BDD con Behave + Selenium Firefox, Despliegue Automatizado por SSH a AWS EC2
+          </p>
+
+          <p data-i18n="p2_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Liderazgo del desarrollo integral y automatización de entrega para la plataforma académica de Lenguas Extranjeras (UAZ). Arquitectura backend en Django empaquetada con Apache mod_wsgi sobre Debian, base de datos relacional MariaDB y un pipeline continuo en <strong>Jenkins</strong> orquestando calidad estricta (Flake8), pruebas unitarias y pruebas de aceptación <strong>BDD con Behave y Selenium Headless</strong>.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-orange-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="git-pull-request" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p2_f1_title">Pipeline CI/CD en Jenkins</span>
+              </div>
+              <p data-i18n="p2_f1_desc" class="text-xs text-slate-400">
+                Declarativo en <code>Jenkinsfile</code>: linter Flake8, unit tests, versionado semántico automático (<code>v${BUILD_NUMBER}</code>) y push seguro con <code>withCredentials</code> a registro Docker privado.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-purple-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p2_f2_title">Testing BDD & Selenium</span>
+              </div>
+              <p data-i18n="p2_f2_desc" class="text-xs text-slate-400">
+                Escenarios Gherkin (<code>.feature</code>) ejecutados con Behave contra un contenedor en red de <code>selenium/standalone-firefox</code> para validar flujos de usuario reales antes de permitir el build.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-accent-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="server" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p2_f3_title">Despliegue SSH a AWS EC2</span>
+              </div>
+              <p data-i18n="p2_f3_desc" class="text-xs text-slate-400">
+                Despliegue continuo vía SSH agent hacia servidor remoto AWS EC2, con respaldo automático de versión anterior (<code>IMAGE_VERSION_OLD</code>) en el <code>.env</code> para rollback sin fricción.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Jenkinsfile</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">GitLab</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">AWS EC2 (SSH CD)</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Behave (BDD)</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Selenium Firefox</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Flake8</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Django</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">MariaDB</span>
+          </div>
+        </article>
+
+                <!-- Proyecto 3: Doctor Chile: Detección Fitosanitaria con IA (YOLO) & Mobile (Flutter) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-emerald-500/10 transition-colors"></div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium">
+                <span data-i18n="p3_b1">Visión por Computadora (IA) & Mobile</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                Ultralytics YOLOv8 • PyTorch • Flutter
+              </span>
+            </div>
+            <a href="https://github.com/YairRT45/doctor_chile_app" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 hover:text-white px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-slate-700 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current inline-block" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>YairRT45/doctor_chile_app</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p3_title" class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">Doctor Chile: Sistema Fitosanitario de Detección con IA (YOLO) & App Móvil (Flutter)</h3>
+          <p data-i18n="p3_sub" class="text-sm font-mono text-emerald-400/90 mt-1 mb-4">
+            Pipeline Completo de Deep Learning (PyTorch & Ultralytics YOLOv8), Curación AgML y Cliente Offline en Flutter & Dart con SQLite FFI
+          </p>
+
+          <p data-i18n="p3_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Solución integral de <strong>Visión por Computadora (Computer Vision)</strong> y desarrollo móvil para el diagnóstico y control fitosanitario de plagas y enfermedades en cultivos de chile. Comprende desde la ingeniería de datos y entrenamiento supervisado de modelos <strong>YOLO (v5/v8) con PyTorch</strong> clasificando 5 patologías foliares (Curl, Healthy, Spot, Whitefly, Yellowish), hasta la inferencia en campo mediante una aplicación cliente en <strong>Flutter & Dart</strong> con persistencia local en SQLite FFI y automatización continua de calidad en <strong>GitHub Actions</strong>.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="scan" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p3_f1_title">Pipeline de IA & Deep Learning</span>
+              </div>
+              <p data-i18n="p3_f1_desc" class="text-xs text-slate-400">
+                Curación y balanceo de datasets masivos con AgML, generación de casos negativos, evaluación de mapas de atención visual (<code>ver_atencion_yolo.py</code>) y entrenamiento supervisado con Ultralytics YOLOv8 y PyTorch.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-sky-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p3_f2_title">Cliente Móvil Flutter & SQLite FFI</span>
+              </div>
+              <p data-i18n="p3_f2_desc" class="text-xs text-slate-400">
+                Interfaz reactiva fluida para diagnóstico en campo, catálogo patológico y almacenamiento local offline con bindings C/Linux (<code>libsqlite3-dev</code>) para áreas agrícolas sin cobertura de red.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-accent-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="git-merge" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p3_f3_title">CI/CD & Exportación de Modelos</span>
+              </div>
+              <p data-i18n="p3_f3_desc" class="text-xs text-slate-400">
+                Workflow en GitHub Actions sobre Ubuntu Runners con linter estricto (<code>flutter analyze --fatal-infos</code>), suite de pruebas unitarias y scripts de exportación de pesos optimizados (<code>export_chili.py</code>).
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Computer Vision</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Ultralytics YOLOv8</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">PyTorch</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">AgML Datasets</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Flutter</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Dart</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">SQLite FFI</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">GitHub Actions CI/CD</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p3_tag9">Control Fitosanitario</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 4: Motor de Estructuras de Datos Avanzadas, Algoritmo de Dijkstra & Compilador (Java) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-indigo-500/10 transition-colors"></div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-medium">
+                <span data-i18n="p4_b1">Fundamentos de Ciencias de la Computación</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                <span data-i18n="p4_b2">Java Puro • Algoritmos a Bajo Nivel • Sin Librerías</span>
+              </span>
+            </div>
+            <a href="https://github.com/YairRT45/data-structures-and-algorithms-java" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 hover:text-white px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-slate-700 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current inline-block" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>YairRT45/data-structures-and-algorithms-java</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p4_title" class="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">Motor de Estructuras de Datos Complejas, Algoritmo de Dijkstra & Compilador</h3>
+          <p data-i18n="p4_sub" class="text-sm font-mono text-indigo-400/90 mt-1 mb-4">
+            Implementación a Mano de Grafos, Árboles, Parser Sintáctico con Máquina de Pilas y Procesamiento Binario de Audio e Imágenes
+          </p>
+
+          <p data-i18n="p4_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Arquitectura de <strong>fundamentos de ciencias de la computación</strong> desarrollada en <strong>Java puro a bajo nivel de memoria</strong>, sin depender de estructuras preconstruidas de la JDK. Comprende la implementación manual de colecciones dinámicas y no lineales, algoritmos de optimización de rutas mínimas en grafos dirigidos, evaluación sintáctica de expresiones mediante árboles binarios, analizador léxico/sintáctico tipo compilador y procesamiento a nivel de bytes para formatos de audio WAV y transformaciones matriciales multidimensionales.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-indigo-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p4_f1_title">Grafos, Dijkstra & Árboles</span>
+              </div>
+              <p data-i18n="p4_f1_desc" class="text-xs text-slate-400">
+                Modelado de grafos dinámicos y estáticos con el algoritmo de caminos mínimos de <strong>Dijkstra</strong>, árboles de búsqueda binaria (ABB), montículos/heaps y árboles de expresiones aritméticas para cálculo infijo/postfijo.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-amber-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p4_f2_title">Compilador & Parser Sintáctico</span>
+              </div>
+              <p data-i18n="p4_f2_desc" class="text-xs text-slate-400">
+                Verificador sintáctico basado en máquinas de pila para comprobación de balanceo de delimitadores, detección posicional de errores léxicos y evaluación semántica de instrucciones de código.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-cyan-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p4_f3_title">Matrices 3D & Audio Binario</span>
+              </div>
+              <p data-i18n="p4_f3_desc" class="text-xs text-slate-400">
+                Decodificación y filtrado de señales de audio <code>.wav</code> a nivel de muestras de bytes; motor de álgebra matricial 2D/3D para convolución, escala de grises y rotaciones en procesamiento digital de imágenes.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20" data-i18n="p4_tag1">Algoritmo de Dijkstra</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20" data-i18n="p4_tag2">Árboles de Búsqueda Binaria</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p4_tag3">Teoría de Grafos</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p4_tag4">Montículos / Heaps</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p4_tag5">Compiladores & Parsers</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p4_tag6">Procesamiento WAV</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p4_tag7">Matrices 2D/3D</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p4_tag8">Modelos Ocultos de Markov</span>
+          </div>
+        </article>
+
+
+                <!-- Proyecto 5: MovilSecure (Líder de Calidad & Desarrollador) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-purple-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-purple-500/10 transition-colors"></div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-mono font-medium">
+                <span data-i18n="p5_b1">Líder de Calidad (QA Lead) & Colaborador</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                <span data-i18n="p5_b2">Procedimientos IV&V • Auditorías • Kotlin</span>
+              </span>
+            </div>
+            <a href="https://github.com/erikluevano/4Nodos" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 hover:text-white px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-slate-700 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current inline-block" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>erikluevano/4Nodos</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p5_title" class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">MovilSecure: Liderazgo de Calidad (IV&V) & Aplicación de Rutas Médicas</h3>
+          <p data-i18n="p5_sub" class="text-sm font-mono text-purple-400/90 mt-1 mb-4">
+            Gestión de Calidad de Software, Procedimientos IV&V, Revisiones de Diseño, Orquestación de Pruebas y Desarrollo en Kotlin
+          </p>
+
+          <p data-i18n="p5_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Lideré la estrategia de calidad y verificación para el equipo de desarrollo de <strong>MovilSecure</strong> (asistencia y navegación médica rápida para cuidadores). Fui el responsable de orquestar la integración continua, coordinar suites de pruebas, realizar auditorías técnicas de código, dirigir revisiones de diseño de software y aplicar procedimientos formales de <strong>Verificación y Validación Independiente (IV&V)</strong>, complementado con desarrollo activo en Kotlin y Room DB.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-purple-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p5_f1_title">Procedimientos IV&V y Auditorías</span>
+              </div>
+              <p data-i18n="p5_f1_desc" class="text-xs text-slate-400">
+                Diseño y ejecución de procesos formales de Verificación y Validación Independiente (IV&V), auditorías de especificaciones y control de trazabilidad de requerimientos.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-accent-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="git-pull-request" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p5_f2_title">Revisiones de Diseño & Integración</span>
+              </div>
+              <p data-i18n="p5_f2_desc" class="text-xs text-slate-400">
+                Orquestación de la integración entre ramas, revisión crítica de arquitectura/diseño de software a los compañeros y validación de Pull Requests para tolerancia cero a fallos.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="code" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p5_f3_title">Desarrollo Activo en Kotlin</span>
+              </div>
+              <p data-i18n="p5_f3_desc" class="text-xs text-slate-400">
+                Implementación directa en el repositorio (13 commits): persistencia con Room Database, arquitectura MVVM, Google Maps API y refactorización de perfiles/medicamentos.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p5_tag1">Liderazgo de Calidad</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p5_tag2">Procedimientos IV&V</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p5_tag3">Auditorías Técnicas</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300" data-i18n="p5_tag4">Revisiones de Diseño (Peer Reviews)</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Kotlin (100%)</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Room Database</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">MVVM</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 5: Observabilidad & Monitoreo DevOps (erikluevano/Observabilidad) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-emerald-500/10 transition-colors"></div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium">
+                <span data-i18n="p6_b1">DevOps & Observabilidad Cloud</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                <span data-i18n="p6_b2">Despliegue en AWS • Trabajo Colaborativo en Servidor</span>
+              </span>
+            </div>
+            <a href="https://github.com/erikluevano/Observabilidad" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-300 hover:text-white px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-slate-700 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current inline-block" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>erikluevano/Observabilidad</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p6_title" class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">Stack Integral de Observabilidad, Telemetría & Alertas en la Nube</h3>
+          <p data-i18n="p6_sub" class="text-sm font-mono text-emerald-400/90 mt-1 mb-4">
+            Infraestructura Multicontenedor con Prometheus, Grafana, Alertmanager, Node Exporter, cAdvisor, Blackbox Exporter y Nginx Proxy Manager
+          </p>
+
+          <p data-i18n="p6_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Diseño e implementación colaborativa de una plataforma integral de observabilidad y monitoreo desplegada directamente sobre servidores en la nube (AWS EC2 / Linux). Arquitectura multicontenedor orquestada con <strong>Docker Compose</strong> para la ingesta de telemetría a nivel de sistema operativo, estado de contenedores Docker, rendimiento de bases de datos relacionales, disponibilidad de microservicios y generación automatizada de alertas críticas.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="activity" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p6_f1_title">Monitoreo de Aplicaciones</span>
+              </div>
+              <p data-i18n="p6_f1_desc" class="text-xs text-slate-400">
+                Recolección de métricas activas en aplicaciones backend <strong>Django</strong> (<code>/django-metrics/metrics</code>), servidores de aplicaciones <strong>Tomcat (Java)</strong>, base de datos <strong>MariaDB</strong> (vía <code>mysqld-exporter</code>) y disponibilidad HTTP con <strong>Blackbox Exporter</strong>.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-accent-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="server" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p6_f2_title">Telemetría de Host & Contenedores</span>
+              </div>
+              <p data-i18n="p6_f2_desc" class="text-xs text-slate-400">
+                Inspección profunda de hardware y sistema operativo con <strong>Node Exporter</strong> (CPU, RAM, red, I/O disco) y métricas de rendimiento por contenedor en tiempo real con <strong>cAdvisor</strong>.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-purple-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="bell-ring" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p6_f3_title">Alertas PromQL & Dashboards</span>
+              </div>
+              <p data-i18n="p6_f3_desc" class="text-xs text-slate-400">
+                Reglas de alerta personalizadas con <strong>Alertmanager</strong> (CPU > 80%, RAM > 85%, disco crítico > 90% y contenedores caídos), dashboards interactivos en <strong>Grafana</strong> y enrutamiento seguro mediante <strong>Nginx Proxy Manager</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Prometheus</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Grafana</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Alertmanager</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">cAdvisor</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Node Exporter</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Blackbox Exporter</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Nginx Proxy Manager</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Docker Compose</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">AWS EC2 / Linux</span>
+          </div>
+        </article>
+
+        <!-- Proyecto 6: Orquestación Políglota de Microservicios (examen1-deploy) -->
+        <article class="rounded-2xl border border-slate-800 bg-dark-900/70 p-6 sm:p-8 hover:border-slate-700 transition-all relative overflow-hidden group">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-cyan-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-cyan-500/10 transition-colors"></div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono font-medium">
+                <span data-i18n="p7_b1">Orquestación Docker Avanzada</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800 text-slate-300 text-xs font-mono">
+                <span data-i18n="p7_b2">Malla Políglota de 4 Stacks • Redes Aisladas</span>
+              </span>
+            </div>
+            <a href="https://gitlab.com/ryrt32/examen1-deploy" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-xs font-mono text-orange-400 hover:text-orange-300 px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 hover:border-orange-500/40 transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M22.65 14.39L20 5.41a.5.5 0 0 0-.95-.14l-2.47 7.55H7.42L4.95 5.27a.5.5 0 0 0-.95.14l-2.65 8.98a.5.5 0 0 0 .18.53l10.15 7.42a.5.5 0 0 0 .6 0l10.15-7.42a.5.5 0 0 0 .19-.53z"/></svg>
+              <span>ryrt32/examen1-deploy</span>
+            </a>
+          </div>
+
+          <h3 data-i18n="p7_title" class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">Orquestación de Microservicios Políglotas con Docker Compose & Nginx Proxy Manager</h3>
+          <p data-i18n="p7_sub" class="text-sm font-mono text-cyan-400/90 mt-1 mb-4">
+            FastAPI + PostgreSQL, Spring Boot + MongoDB, Laravel 8 + MySQL y React Admin con Healthchecks y Redes Seguras
+          </p>
+
+          <p data-i18n="p7_desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+            Diseño de una arquitectura distribuida multicontenedor que unifica 4 aplicaciones heterogéneas de código abierto en un solo entorno coordinado. Implementación de aislamiento de redes (<code>frontend</code> y <code>backend</code>), sondas de salud (healthchecks) en bases de datos para arranque ordenado, consumo de API entre microservicios (React Admin alimentado de la API de FastAPI) y enrutamiento perimetral con Nginx Proxy Manager.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-cyan-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p7_f1_title">Malla Políglota 4-en-1</span>
+              </div>
+              <p data-i18n="p7_f1_desc" class="text-xs text-slate-400">
+                Coordinación de <strong>FastAPI</strong> (Python), <strong>Spring Boot</strong> (Java), <strong>Laravel 8</strong> (PHP) y <strong>React Admin</strong> (SPA) en un único <code>docker-compose.yaml</code> reproducible.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p7_f2_title">Aislamiento de Redes (Frontend / Backend)</span>
+              </div>
+              <p data-i18n="p7_f2_desc" class="text-xs text-slate-400">
+                Segmentación de tráfico: las 3 bases de datos (PostgreSQL 15, MongoDB 6 y MySQL 8) residen en la red privada sin exponerse al host, accesibles únicamente por sus microservicios.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-dark-950/70 border border-slate-800/80">
+              <div class="text-xs font-mono text-amber-400 flex items-center gap-1.5 mb-1.5">
+                <i data-lucide="heart-pulse" class="w-3.5 h-3.5"></i>
+                <span data-i18n="p7_f3_title">Healthchecks & Sincronización</span>
+              </div>
+              <p data-i18n="p7_f3_desc" class="text-xs text-slate-400">
+                Sondas activas (<code>pg_isready</code>, <code>mongosh ping</code>, <code>mysqladmin ping</code>) con <code>condition: service_healthy</code> para evitar fallos de conexión por condiciones de carrera al levantar el stack.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/60">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Docker Compose</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">FastAPI</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Spring Boot (Java)</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Laravel 8</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">React Admin</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">PostgreSQL 15</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">MongoDB 6</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">MySQL 8</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Nginx Proxy Manager</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800/60 text-slate-300">Healthchecks</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Educación e Idiomas (Directo del CV) -->
+    <section id="educacion" class="py-16 scroll-mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <!-- Educación -->
+        <div class="md:col-span-7 p-6 sm:p-8 rounded-2xl bg-dark-900 border border-slate-800">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-slate-800 text-xs font-mono text-brand-400 mb-4">
+            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+            <span data-i18n="edu_badge">Formación Académica</span>
+          </div>
+
+          <h3 data-i18n="edu_deg_title" class="text-xl font-bold text-white mb-1">
+            Ingeniería de Software
+          </h3>
+          <p data-i18n="edu_deg_school" class="text-brand-400 font-mono text-sm mb-3">
+            Universidad Autónoma de Zacatecas (UAZ)
+          </p>
+          <div class="inline-block text-xs font-mono text-slate-400 bg-dark-950 px-2.5 py-1 rounded border border-slate-800 mb-4">
+            <span data-i18n="edu_deg_period">2022 — Presente (En curso)</span>
+          </div>
+
+          <p data-i18n="edu_deg_desc" class="text-slate-300 text-sm leading-relaxed">
+            Formación enfocada en ciclo de vida del software, diseño de arquitecturas robustas, gestión de bases de datos relacionales, redes, sistemas operativos e ingeniería de requerimientos.
+          </p>
+        </div>
+
+        <!-- Idiomas & Soft Skills -->
+        <div class="md:col-span-5 p-6 sm:p-8 rounded-2xl bg-dark-900 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-dark-850 border border-slate-800 text-xs font-mono text-accent-400 mb-4">
+              <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+              <span data-i18n="edu_lang_badge">Idiomas</span>
+            </div>
+
+            <div class="space-y-4">
+              <div class="p-3 rounded-xl bg-dark-950 border border-slate-800/80 flex items-center justify-between">
+                <div>
+                  <h4 data-i18n="edu_lang_es_title" class="text-sm font-bold text-white">Español</h4>
+                  <p data-i18n="edu_lang_es_desc" class="text-xs text-slate-400">Lengua Materna</p>
+                </div>
+                <span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+                  <span data-i18n="edu_lang_es_level">Nativo</span>
+                </span>
+              </div>
+
+              <div class="p-3 rounded-xl bg-dark-950 border border-slate-800/80 flex items-center justify-between">
+                <div>
+                  <h4 data-i18n="edu_lang_en_title" class="text-sm font-bold text-white">Inglés</h4>
+                  <p data-i18n="edu_lang_en_desc" class="text-xs text-slate-400">Lectura y comunicación técnica</p>
+                </div>
+                <span class="px-2.5 py-1 rounded text-xs font-mono bg-accent-500/10 text-accent-400 border border-accent-500/20 font-semibold">
+                  <span data-i18n="edu_lang_en_level">Nivel B1</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800/70 text-xs font-mono text-slate-400">
+            <p data-i18n="edu_lang_footer">Capacidad para trabajar en equipos multidisciplinarios bajo metodologías ágiles (Scrum).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contacto / CTA Section -->
+    <section id="contacto" class="py-20 scroll-mt-20">
+      <div class="rounded-3xl bg-gradient-to-r from-dark-900 via-dark-850 to-dark-900 border border-slate-800 p-8 sm:p-12 text-center relative overflow-hidden glow-brand">
+        <div class="max-w-2xl mx-auto space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-mono text-brand-400">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span data-i18n="contact_badge">Contacto Profesional</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="contact_title">
+            ¿Buscas incorporar un Ingeniero de Software a tu equipo?
+          </h2>
+
+          <p data-i18n="contact_desc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Estoy disponible para posiciones de <strong class="text-brand-400">Junior Backend Developer</strong> o <strong class="text-accent-400">Junior DevOps Engineer</strong> (remoto, híbrido o presencial). Hablemos de cómo puedo aportar valor técnico inmediato a tus productos e infraestructura.
+          </p>
+
+          <!-- Contact Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left pt-2 font-mono text-xs">
+            <a href="mailto:ryrt32@gmail.com" class="p-3.5 rounded-xl bg-dark-950/80 border border-slate-800 hover:border-brand-500/40 transition-colors flex items-center gap-3 group">
+              <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div class="overflow-hidden">
+                <div data-i18n="contact_c1_title" class="text-[10px] text-slate-500 uppercase">Correo Electrónico</div>
+                <div class="text-slate-200 group-hover:text-brand-400 truncate">ryrt32@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="tel:+524921819531" class="p-3.5 rounded-xl bg-dark-950/80 border border-slate-800 hover:border-emerald-500/40 transition-colors flex items-center gap-3 group">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div class="overflow-hidden">
+                <div data-i18n="contact_c2_title" class="text-[10px] text-slate-500 uppercase">Teléfono Directo</div>
+                <div class="text-slate-200 group-hover:text-emerald-400 truncate">+52 492 181 9531</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ramiro-yair-rom%C3%A1n-trejo-1bb164383/" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-dark-950/80 border border-slate-800 hover:border-sky-500/40 transition-colors flex items-center gap-3 group">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </div>
+              <div class="overflow-hidden">
+                <div data-i18n="contact_c3_title" class="text-[10px] text-slate-500 uppercase">LinkedIn</div>
+                <div class="text-slate-200 group-hover:text-sky-400 truncate">Ramiro Yair Román Trejo</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+            <a href="mailto:ryrt32@gmail.com" 
+               class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-dark-950 font-bold text-sm transition-all flex items-center gap-2 shadow-lg shadow-brand-500/20">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span data-i18n="contact_btn_send">Enviar un Correo</span>
+            </a>
+
+            <a href="CV_Ramiro_Yair_Roman_Trejo.pdf" download="CV_Ramiro_Yair_Roman_Trejo.pdf"
+               class="px-6 py-3 rounded-xl bg-dark-850 hover:bg-dark-800 border border-brand-500/40 text-brand-400 hover:text-brand-300 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span data-i18n="contact_btn_cv">Descargar CV</span>
+            </a>
+
+            <a href="https://github.com/YairRT45" target="_blank" rel="noopener noreferrer"
+               class="px-6 py-3 rounded-xl bg-dark-950 hover:bg-slate-900 border border-slate-700 text-slate-200 font-semibold text-sm transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span data-i18n="contact_btn_gh">Ver GitHub (@YairRT45)</span>
+            </a>
+          </div>
+
+          <div class="pt-4 text-xs font-mono text-slate-500">
+            <span data-i18n="contact_location_footer">Pozo de Gamboa, Zacatecas, México • Disponible para Reubicación o Remoto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 bg-dark-950 py-10 relative z-10 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center justify-center gap-2.5">
+        <div class="h-5 w-auto flex items-center shrink-0 opacity-80 hover:opacity-100 transition-opacity">
+          <img src="logo.svg" alt="RYRT Logo" class="h-5 w-auto">
+        </div>
+        <p data-i18n="footer_copy">© 2026 Ramiro Yair Román Trejo. Portafolio Web Profesional.</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#inicio" class="text-slate-400 hover:text-brand-400 transition-colors"><span data-i18n="footer_top">Volver arriba ↑</span></a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/ramiro-yair-rom%C3%A1n-trejo-1bb164383/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 transition-colors">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/YairRT45" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-400 transition-colors">GitHub</a>
+        <span>•</span>
+        <a href="https://gitlab.com/ryrt32" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-orange-400 transition-colors">GitLab</a>
+        <span>•</span>
+        <a href="mailto:ryrt32@gmail.com" class="text-slate-400 hover:text-brand-400 transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para iconos e interactividad -->
+  <script>
+    // Inicializar Lucide Icons
+    lucide.createIcons();
+
+    // Copiar email real al portapapeles
+    function copiarEmail() {
+      const email = "ryrt32@gmail.com"; 
+      navigator.clipboard.writeText(email).then(() => {
+        const textSpan = document.getElementById("copy-text");
+        const prevText = textSpan.innerText;
+        textSpan.innerText = "¡Email Copiado!";
+        setTimeout(() => {
+          textSpan.innerText = prevText;
+        }, 2200);
+      });
+    }
+  </script>
+  <!-- i18n Translations -->
+  <script>
+// Translations dictionary for Ramiro Yair Román Trejo Portfolio
+const i18n = {
+  "es": {
+    "nav_exp": "Experiencia",
+    "nav_skills": "Habilidades",
+    "nav_projects": "Proyectos",
+    "nav_edu": "Educación",
+    "nav_contact": "Contacto",
+    "hero_badge": "Ingeniero de Software | <strong class=\"text-brand-400\">Backend</strong> & <strong class=\"text-accent-400\">DevOps Junior</strong>",
+    "hero_p1": "Especializado en <strong class=\"text-white\">desarrollo backend (Python / Django / FastAPI)</strong> y <strong class=\"text-white\">prácticas DevOps</strong> (Docker, Linux, CI/CD). Con sólidos fundamentos en <span class=\"text-indigo-400 font-mono text-sm font-medium\">Ciencias de la Computación</span> (estructuras de datos, algoritmos y grafos), experiencia en plataformas empresariales, pipelines de <span class=\"text-emerald-400 font-mono text-sm font-medium\">Visión por Computadora (YOLO)</span> y observabilidad con <span class=\"text-accent-400 font-mono text-sm font-medium\">Prometheus/Grafana</span>.",
+    "hero_p2": "Capacidad demostrada para digitalizar procesos operativos críticos en entornos industriales (como <strong class=\"text-slate-200\">Grupo Modelo / Compañía Cervecera de Zacatecas</strong>) y académicos de alta exigencia.",
+    "hero_loc": "Pozo de Gamboa, Zacatecas, MX",
+    "hero_langs": "Inglés B1 | Español Nativo",
+    "hero_btn_contact": "Contactar Directo",
+    "hero_btn_cv": "Descargar CV",
+    "hero_btn_copy": "Copiar Email",
+    "hero_copied": "¡Copiado!",
+    "term_comment": "# Datos del Candidato",
+    "term_cat": "$ cat perfil.json",
+    "term_title": "\"titulo\":",
+    "term_title_val": "\"Ing. Software | Backend & DevOps\"",
+    "term_status_cmd": "$ systemctl status engineering-stack",
+    "term_st1": "● backend.service - active [Django 5, FastAPI & DRF]",
+    "term_st2": "● mobile-apps - active [Flutter/Dart Fitosanitario & Kotlin/Room]",
+    "term_st3": "● docker-compose - polyglot mesh [Postgres, Mongo, MariaDB]",
+    "term_st4": "● jenkins-ci - pipeline passing [Behave BDD + Selenium]",
+    "term_st5": "● prometheus-grafana - telemetría en vivo [cAdvisor + Node]",
+    "spec_b_sub": "Backend & APIs REST",
+    "spec_d_sub": "Contenedores & Bash",
+    "spec_o_sub": "Observabilidad & Alertas",
+    "spec_q_sub": "Behave & Calidad",
+    "exp_badge": "Trayectoria Comprobada",
+    "exp_title": "Experiencia Profesional",
+    "exp_desc": "Impacto medible en industria cervecera, proyectos académicos y manufactura.",
+    "job1_role": "Desarrollador Web / Consultor de Software",
+    "job1_company": "Compañía Cervecera de Zacatecas (Grupo Modelo)",
+    "job1_date": "Ago 2026 – Oct 2026",
+    "job1_desc1": "<strong class=\"text-white\">Diseñé e implementé una plataforma web centralizada</strong> para el control y trazabilidad de auditorías de herramientas y Buenas Prácticas de Operación (GOPs) de mantenimiento.",
+    "job1_desc2": "<strong class=\"text-white\">Reduje tiempos de captura y seguimiento manual</strong> mediante la digitalización del flujo de inspección y generación de planes de acción en planta.",
+    "job1_desc3": "<strong class=\"text-white\">Estructuré el modelo de datos relacional</strong> y las interfaces de usuario asegurando la integridad estricta de los registros operativos.",
+    "job1_desc4": "Modelado y análisis de indicadores de planta (<strong>MTTR</strong> - Tiempo Medio de Reparación y <strong>LEF</strong> - Eficiencia de Línea), conectando orígenes en SharePoint y Power BI.",
+    "job2_role": "Líder Técnico & Desarrollador Backend",
+    "job2_company": "Universidad Autónoma de Zacatecas — Licenciatura en Lenguas Extranjeras",
+    "job2_date": "Nov 2025 – May 2026",
+    "job2_desc1": "<strong class=\"text-white\">Lideré el desarrollo integral</strong> de una plataforma web de gestión académica utilizando Python y Django.",
+    "job2_desc2": "<strong class=\"text-white\">Coordiné la planificación ágil</strong> del equipo de desarrollo, asignación de requerimientos y despliegue del sistema en servidores Linux.",
+    "job2_desc3": "<strong class=\"text-white\">Implementé pruebas de aceptación BDD con Behave</strong> (Behavior-Driven Development), garantizando el cumplimiento de los flujos críticos de usuario antes de la puesta en producción.",
+    "job2_desc4": "Automaticé el despliegue continuo vía <strong>SSH hacia AWS EC2</strong> con mecanismo de rollback dinámico (<code>IMAGE_VERSION_OLD</code>) en variables de entorno.",
+    "job3_role": "Líder de Calidad (QA Lead) & Desarrollador Android",
+    "job3_company": "MovilSecure (Proyecto Colaborativo 4Nodos)",
+    "job3_date": "Oct 2025 – Nov 2025",
+    "job3_desc1": "Diseñé y coordiné la estrategia de <strong>Verificación y Validación Independiente (IV&V)</strong>, auditorías técnicas de especificaciones y control de trazabilidad de requerimientos.",
+    "job3_desc2": "Dirigí revisiones formales de diseño y código (Design & Code Reviews) aplicando criterios estrictos de aprobación previa a merges en ramas protegidas.",
+    "job3_desc3": "Contribuí activamente en la aplicación nativa en <strong>Kotlin (MVVM)</strong>, persistencia local con <strong>Room DB</strong> e integración de <strong>Google Maps API</strong> para rutas de emergencia médica.",
+    "job4_role": "Inspector de Aseguramiento de Calidad (QA)",
+    "job4_company": "Nagakura Engineering Works",
+    "job4_date": "Abr 2021 – Jul 2022",
+    "job4_desc1": "<strong class=\"text-white\">Ejecución y supervisión de protocolos</strong> de inspección dimensional y de materiales bajo estrictas tolerancias de manufactura.",
+    "job4_desc2": "<strong class=\"text-white\">Detección y contención de desviaciones</strong> en líneas de producción; documentación formal de no conformidades y análisis de causa raíz (RCA) para acciones correctivas.",
+    "job4_desc3": "<strong class=\"text-white\">Aseguramiento del cumplimiento de estándares</strong> de calidad y auditoría de cambios en especificaciones técnicas de materia prima.",
+    "skills_badge": "Competencias Técnicas & Fundamentos",
+    "skills_title": "Habilidades, Tecnologías & Fundamentos CS",
+    "skills_desc": "Ciencias de la computación puras, arquitectura backend, infraestructura cloud, observabilidad e inteligencia artificial.",
+    "sk_c1_title": "Backend & APIs REST",
+    "sk_c1_desc": "Lógica de servidor robusta, microservicios y APIs asíncronas.",
+    "sk_c2_title": "DevOps & Cloud",
+    "sk_c2_desc": "Aislamiento de entornos, pipelines y despliegues seguros.",
+    "sk_c3_title": "Observabilidad & SRE",
+    "sk_c3_desc": "Monitoreo continuo de hosts, contenedores y microservicios.",
+    "sk_c4_title": "Fundamentos de CS & Algoritmos",
+    "sk_c4_desc": "Estructuras de datos puras a bajo nivel de memoria en Java.",
+    "sk_c5_title": "IA & Visión por Computadora",
+    "sk_c5_desc": "Entrenamiento supervisado de Deep Learning y pipelines de datos.",
+    "sk_c6_title": "Criptografía & Seguridad",
+    "sk_c6_desc": "Criptosistemas asimétricos, cifrado de flujo y criptoanálisis.",
+    "sk_c7_title": "Bases de Datos (SQL & NoSQL)",
+    "sk_c7_desc": "Modelado estructurado, persistencia segura y optimización.",
+    "sk_c8_title": "QA, Testing & Metodología PSP",
+    "sk_c8_desc": "Garantía estricta de calidad, validación y testing continuo.",
+    "sk_c9_title": "Mobile & Multiplataforma",
+    "sk_c9_desc": "Desarrollo nativo e híbrido con pipelines automatizados.",
+    "proj_badge": "Implementaciones Reales",
+    "proj_title": "Proyectos de Ingeniería",
+    "proj_desc": "Aplicaciones empresariales, automatización de infraestructura y pipelines.",
+    "p1_title": "Plataforma Web de Auditorías & Buenas Prácticas de Operación (GOPs)",
+    "p1_sub": "Sistema Web en Django 5.0 + PostgreSQL 16 con Despliegue en Docker Compose para Planta Industrial",
+    "p1_desc": "Plataforma web desarrollada para la <strong>Compañía Cervecera de Zacatecas (Grupo Modelo / AB InBev)</strong> para centralizar y auditar la ejecución de Buenas Prácticas de Operación (GOPs), trazabilidad de herramientas y control de fallas en el departamento de Envasado. Reemplazó los registros manuales en papel por un flujo digital estructurado con roles diferenciados.",
+    "p1_f1_title": "Control Operativo en Planta",
+    "p1_f1_desc": "Checklists dinámicos por línea de producción, registro de incidentes y seguimiento de planes de acción correctiva en tiempo real.",
+    "p1_f2_title": "Backend Django 5 & PostgreSQL",
+    "p1_f2_desc": "ORM avanzado con modelos relacionales normalizados, validaciones personalizadas y panel administrativo optimizado para supervisores.",
+    "p1_f3_title": "Despliegue Multi-Contenedor",
+    "p1_f3_desc": "Configuración reproducible con Docker Compose, volúmenes de datos persistentes y aislamiento seguro de servicios.",
+    "p2_title": "Plataforma de Gestión Académica con CI/CD en Jenkins & Testing BDD",
+    "p2_sub": "Stack Django 4.x + MariaDB + Pruebas Behave con Selenium Firefox Headless y Despliegue SSH en AWS EC2",
+    "p2_desc": "Sistema de gestión y seguimiento curricular para la <strong>Licenciatura en Lenguas Extranjeras (UAZ)</strong>. El proyecto destaca por su riguroso flujo de <strong>DevOps y QA Automation</strong>: un pipeline declarativo en Jenkins que ejecuta análisis estático con Flake8, pruebas unitarias y pruebas de comportamiento en un navegador real automatizado antes de desplegar en producción.",
+    "p2_f1_title": "Pipeline Jenkins Declarativo",
+    "p2_f1_desc": "Automatización total: linter estricto, pruebas, versionado semántico y push seguro a registry privado en <code>registry.roman-mx.tech</code>.",
+    "p2_f2_title": "Testing BDD con Selenium",
+    "p2_f2_desc": "Pruebas de aceptación con Behave en Gherkin conectadas a un contenedor de Firefox Headless para validar la interfaz web.",
+    "p2_f3_title": "Continuous Deployment a AWS",
+    "p2_f3_desc": "Despliegue remoto automatizado vía SSH en instancia AWS EC2, con respaldo dinámico de versiones para rollbacks sin fricción.",
+    "p3_title": "Doctor Chile: Sistema Fitosanitario de Detección con IA (YOLO) & App Móvil (Flutter)",
+    "p3_sub": "Pipeline Completo de Deep Learning (PyTorch & Ultralytics YOLOv8), Curación AgML y Cliente Offline en Flutter & Dart con SQLite FFI",
+    "p3_desc": "Solución integral de <strong>Visión por Computadora (Computer Vision)</strong> y desarrollo móvil para el diagnóstico y control fitosanitario de plagas y enfermedades en cultivos de chile. Comprende desde la ingeniería de datos y entrenamiento supervisado de modelos <strong>YOLO (v5/v8) con PyTorch</strong> clasificando 5 patologías foliares, hasta la inferencia en campo mediante una aplicación cliente en <strong>Flutter & Dart</strong> con persistencia local en SQLite FFI y automatización continua de calidad en <strong>GitHub Actions</strong>.",
+    "p3_f1_title": "Pipeline de IA & Deep Learning",
+    "p3_f1_desc": "Curación y balanceo de datasets masivos con AgML, generación de casos negativos, evaluación de mapas de atención visual y entrenamiento supervisado con Ultralytics YOLOv8 y PyTorch.",
+    "p3_f2_title": "Cliente Móvil Flutter & SQLite FFI",
+    "p3_f2_desc": "Interfaz reactiva fluida para diagnóstico en campo, catálogo patológico y almacenamiento local offline con bindings C/Linux (<code>libsqlite3-dev</code>) para áreas agrícolas sin cobertura de red.",
+    "p3_f3_title": "CI/CD & Exportación de Modelos",
+    "p3_f3_desc": "Workflow en GitHub Actions sobre Ubuntu Runners con linter estricto (<code>flutter analyze --fatal-infos</code>), suite de pruebas unitarias y scripts de exportación de pesos optimizados.",
+    "p4_title": "Motor de Estructuras de Datos Complejas, Algoritmo de Dijkstra & Compilador",
+    "p4_sub": "Implementación a Mano de Grafos, Árboles, Parser Sintáctico con Máquina de Pilas y Procesamiento Binario de Audio e Imágenes",
+    "p4_desc": "Arquitectura de <strong>fundamentos de ciencias de la computación</strong> desarrollada en <strong>Java puro a bajo nivel de memoria</strong>, sin depender de estructuras preconstruidas de la JDK. Comprende la implementación manual de colecciones dinámicas y no lineales, algoritmos de optimización de rutas mínimas en grafos dirigidos, evaluación sintáctica de expresiones mediante árboles binarios, analizador léxico/sintáctico tipo compilador y procesamiento a nivel de bytes para formatos de audio WAV y transformaciones matriciales multidimensionales.",
+    "p4_f1_title": "Grafos, Dijkstra & Árboles",
+    "p4_f1_desc": "Modelado de grafos dinámicos y estáticos con el algoritmo de caminos mínimos de <strong>Dijkstra</strong>, árboles de búsqueda binaria (ABB), montículos/heaps y árboles de expresiones aritméticas para cálculo infijo/postfijo.",
+    "p4_f2_title": "Compilador & Parser Sintáctico",
+    "p4_f2_desc": "Verificador sintáctico basado en máquinas de pila para comprobación de balanceo de delimitadores, detección posicional de errores léxicos y evaluación semántica de instrucciones de código.",
+    "p4_f3_title": "Matrices 3D & Audio Binario",
+    "p4_f3_desc": "Decodificación y filtrado de señales de audio <code>.wav</code> a nivel de muestras de bytes; motor de álgebra matricial 2D/3D para convolución, escala de grises y rotaciones en procesamiento digital de imágenes.",
+    "p5_title": "MovilSecure: Liderazgo de Calidad (IV&V) & Aplicación de Rutas Médicas",
+    "p5_sub": "App Android Nativa en Kotlin + Room DB + Google Maps API bajo Estándares Formales de Aseguramiento de Calidad",
+    "p5_desc": "Aplicación móvil diseñada para la seguridad y monitoreo de pacientes y adultos mayores. Como <strong>Líder de Calidad (QA Lead)</strong>, establecí y ejecuté los procesos de <strong>Verificación y Validación Independiente (IV&V)</strong>, revisión de requerimientos y criterios de aceptación, además de programar módulos críticos del frontend y persistencia de datos.",
+    "p5_f1_title": "Liderazgo de Aseguramiento IV&V",
+    "p5_f1_desc": "Matrices de trazabilidad, casos de prueba de aceptación y revisión técnica rigurosa de Pull Requests del equipo de desarrollo.",
+    "p5_f2_title": "Arquitectura Android MVVM",
+    "p5_f2_desc": "Patrón Model-View-ViewModel en Kotlin con ViewModel, LiveData y separación estricta de responsabilidades.",
+    "p5_f3_title": "Room DB & Google Maps API",
+    "p5_f3_desc": "Persistencia local offline para contactos de emergencia y trazado en tiempo real de rutas óptimas hacia centros médicos.",
+    "p6_title": "Stack Integral de Observabilidad, Telemetría & Alertas en la Nube",
+    "p6_sub": "Monitoreo en Tiempo Real con Prometheus, Grafana, Alertmanager, Exporters & Nginx Proxy Manager en AWS EC2",
+    "p6_desc": "Infraestructura completa de monitoreo para entornos distribuidos desplegada sobre <strong>AWS EC2</strong> con Docker Compose. Diseñada para garantizar visibilidad total sobre la salud de servidores host, contenedores de microservicios y bases de datos relacionales con métricas en tiempo real y reglas de alerta.",
+    "p6_f1_title": "Recolección Multi-Expositor",
+    "p6_f1_desc": "Node Exporter (recursos del host), cAdvisor (telemetría de contenedores), MariaDB Exporter y Blackbox Exporter para pruebas sintéticas de latencia HTTP.",
+    "p6_f2_title": "Dashboards en Grafana",
+    "p6_f2_desc": "Visualización centralizada de consumo de CPU, saturación de RAM, I/O de disco, tráfico de red y estado de salud de servicios.",
+    "p6_f3_title": "Alertas con Alertmanager",
+    "p6_f3_desc": "Reglas de alerta personalizadas en PromQL para notificación proactiva de anomalías, saturación de recursos y caídas de servicio.",
+    "p7_title": "Orquestación de Microservicios Políglotas con Docker Compose & Nginx Proxy Manager",
+    "p7_sub": "Malla Heterogénea: FastAPI + Spring Boot + Laravel 8 + React Admin sobre Redes Aisladas y Healthchecks Activos",
+    "p7_desc": "Infraestructura multi-stack que orquesta 4 tecnologías distintas comunicándose de forma segura en un clúster local de Docker. Cuenta con segmentación de redes (red de backend privada y red de frontend expuesta), sondas de salud activas para orden de arranque estricto y administración centralizada de proxy inverso.",
+    "p7_f1_title": "Arquitectura Multi-Lenguaje",
+    "p7_f1_desc": "FastAPI (Python) + PostgreSQL 15, Spring Boot (Java) + MongoDB 6, Laravel 8 (PHP) + MySQL 8.0 y React Admin consumiendo la API de FastAPI.",
+    "p7_f2_title": "Aislamiento de Redes",
+    "p7_f2_desc": "Red <code>backend</code> aislada del exterior para bases de datos y red <code>frontend</code> pública para servicios expuestos y proxy.",
+    "p7_f3_title": "Healthchecks & Orquestación",
+    "p7_f3_desc": "Comprobaciones activas con <code>pg_isready</code> y <code>mongosh</code> para asegurar que las bases de datos estén listas antes de iniciar las aplicaciones.",
+    "edu_badge": "Formación Académica",
+    "edu_title": "Educación & Idiomas",
+    "edu_deg_title": "Ingeniería de Software",
+    "edu_deg_school": "Universidad Autónoma de Zacatecas (UAZ)",
+    "edu_deg_period": "2022 — Presente (En curso)",
+    "edu_deg_desc": "Formación enfocada en ciclo de vida del software, diseño de arquitecturas robustas, gestión de bases de datos relacionales, redes, sistemas operativos e ingeniería de requerimientos.",
+    "edu_lang_badge": "Idiomas",
+    "edu_lang_es_title": "Español",
+    "edu_lang_es_desc": "Lengua Materna",
+    "edu_lang_es_level": "Nativo",
+    "edu_lang_en_title": "Inglés",
+    "edu_lang_en_desc": "Lectura y comunicación técnica",
+    "edu_lang_en_level": "Nivel B1",
+    "edu_deg_bullet1": "Formación rigurosa en Ciencias de la Computación, Algoritmos, Estructuras de Datos, Arquitectura de Software, Redes y Metodologías de Calidad (PSP/SEI).",
+    "edu_deg_bullet2": "Promedio de excelencia académica; participación destacada en proyectos de desarrollo institucional y auditorías de calidad de software.",
+    "edu_lang_title": "Competencias Idiomáticas",
+    "edu_lang_es": "Español: Nativo (lengua materna)",
+    "edu_lang_en": "Inglés: Intermedio Técnico B1/B2 (lectura fluida de documentación técnica, especificaciones de arquitectura y escritura de código/commits).",
+    "contact_badge": "Contacto Profesional",
+    "contact_title": "¿Buscas incorporar un Ingeniero de Software a tu equipo?",
+    "contact_desc": "Estoy disponible para posiciones de <strong class=\"text-brand-400\">Junior Backend Developer</strong> o <strong class=\"text-accent-400\">Junior DevOps Engineer</strong> (remoto, híbrido o presencial). Hablemos de cómo puedo aportar valor técnico inmediato a tus productos e infraestructura.",
+    "contact_c1_title": "Correo Electrónico",
+    "contact_c2_title": "Teléfono Directo",
+    "contact_c3_title": "LinkedIn Oficial",
+    "contact_btn_send": "Enviar un Correo",
+    "contact_btn_cv": "Descargar CV (PDF)",
+    "footer_copy": "© 2026 Ramiro Yair Román Trejo. Portafolio Web Profesional.",
+    "footer_top": "Volver arriba ↑",
+    "contact_location_footer": "Pozo de Gamboa, Zacatecas, México • Disponible para Reubicación o Remoto",
+    "sk_c1_i1": "Python 3.x (POO & Concurrencia)",
+    "sk_c1_i2": "Django 5.x & Django ORM",
+    "sk_c1_i3": "Django REST Framework (DRF)",
+    "sk_c1_i4": "FastAPI (Async & Microservicios)",
+    "sk_c1_i5": "Arquitectura MVC / RESTful",
+    "sk_c1_i6": "Spring Boot (Java) & Laravel 8",
+    "sk_c2_i1": "Docker & Docker Compose (Multi-stack)",
+    "sk_c2_i2": "Linux (Ubuntu Server & Bash Scripting)",
+    "sk_c2_i3": "GitHub Actions & Jenkins CI/CD",
+    "sk_c2_i4": "Despliegue Remoto SSH en AWS EC2",
+    "sk_c2_i5": "Nginx Proxy Manager & SSL (Let's Encrypt)",
+    "sk_c2_i6": "Registros Docker Privados con Credenciales",
+    "sk_c3_i1": "Prometheus & Alertmanager",
+    "sk_c3_i2": "Grafana Dashboards en Tiempo Real",
+    "sk_c3_i3": "Node Exporter (CPU, RAM, Disco, Red)",
+    "sk_c3_i4": "cAdvisor (Telemetría de Contenedores)",
+    "sk_c3_i5": "Blackbox Exporter (Sondas HTTP sintéticas)",
+    "sk_c3_i6": "Reglas de Alerta en PromQL",
+    "sk_c4_i1": "Árboles Binarios, ABB & Heaps/Montículos",
+    "sk_c4_i2": "Grafos Dirigidos & Algoritmo de Dijkstra",
+    "sk_c4_i3": "Compilador & Parser Sintáctico con Pilas",
+    "sk_c4_i4": "Árboles de Expresiones (Infijo / Postfijo)",
+    "sk_c4_i5": "Procesamiento Binario de Audio (.wav)",
+    "sk_c4_i6": "Matrices 2D/3D & Álgebra de Imágenes",
+    "sk_c5_i1": "Ultralytics YOLOv8 & YOLOv5",
+    "sk_c5_i2": "PyTorch (Deep Learning & Tensores)",
+    "sk_c5_i3": "Curación de Datasets Masivos con AgML",
+    "sk_c5_i4": "Mapas de Calor de Atención Visual",
+    "sk_c5_i5": "Exportación Optimizada para Inferencia",
+    "sk_c5_i6": "Modelos Ocultos de Markov (MOM)",
+    "sk_c6_i1": "Criptosistema RSA Asimétrico (Sockets TCP)",
+    "sk_c6_i2": "Cifrador de Flujo RC4 (Stream Cipher)",
+    "sk_c6_i3": "Cifrado de Sustitución (Disco Alberti / César)",
+    "sk_c6_i4": "Cálculo de Entropía de Shannon & Hamming",
+    "sk_c6_i5": "Generador de Subllaves & Hashing",
+    "sk_c6_i6": "Criba de Eratóstenes para Primos",
+    "sk_c7_i1": "PostgreSQL 15/16 (psycopg3)",
+    "sk_c7_i2": "MariaDB & MySQL 8.0",
+    "sk_c7_i3": "MongoDB 6 (NoSQL Document Store)",
+    "sk_c7_i4": "SQLite & Room Database (Android ORM)",
+    "sk_c7_i5": "Oracle PL/SQL (Triggers & Procedimientos)",
+    "sk_c7_i6": "Healthchecks (<code>pg_isready</code>, <code>mongosh</code>)",
+    "sk_c8_i1": "Metodología PSP (Watts Humphrey / SEI)",
+    "sk_c8_i2": "Procedimientos IV&V (Verificación y Validación)",
+    "sk_c8_i3": "Testing BDD con Behave (Gherkin)",
+    "sk_c8_i4": "Selenium WebDriver (Pruebas E2E en CI)",
+    "sk_c8_i5": "Pruebas Unitarias (pytest & unittest)",
+    "sk_c8_i6": "Flake8 Linters, RCA & Metodologías Ágiles",
+    "sk_c9_i1": "Flutter & Dart (Apps Multiplataforma)",
+    "sk_c9_i2": "Control Fitosanitario & Diagnóstico Agrícola",
+    "sk_c9_i3": "SQLite FFI en Linux y Dispositivos Móviles",
+    "sk_c9_i4": "Kotlin Nativo (Android Jetpack & MVVM)",
+    "sk_c9_i5": "Room Database (Persistencia Local Offline)",
+    "sk_c9_i6": "Google Maps API & Rutas Críticas",
+    "nav_btn_contact": "Contacto",
+    "term_k_name": "\"nombre\":",
+    "term_k_title": "\"titulo\":",
+    "term_k_uni": "\"universidad\":",
+    "term_v_uni": "\"UAZ (2022 - Presente)\"",
+    "term_k_phone": "\"telefono\":",
+    "term_val_prop": "\"Desarrollo backend seguro y trazable, despliegues reproducibles en Linux y observabilidad en tiempo real para entornos productivos.\"",
+    "job1_badge": "Industria / Manufactura",
+    "job1_tag5": "Trazabilidad GOPs",
+    "job2_badge": "Liderazgo & Desarrollo",
+    "job2_tag1": "Liderazgo Ágil / Scrum",
+    "job2_tag3": "Servidores Linux",
+    "job2_tag5": "Calidad de Software",
+    "job4_badge": "Aseguramiento de Calidad (QA)",
+    "job4_tag1": "Análisis Causa Raíz (RCA)",
+    "job4_tag2": "No Conformidades",
+    "job4_tag3": "Auditoría Técnica",
+    "job4_tag4": "Tolerancias Críticas",
+    "proj_explore_gh": "Explorar repositorios en GitHub",
+    "p1_b1": "Caso Real en Producción",
+    "p1_tag6": "Auditoría Industrial",
+    "p2_b1": "Liderazgo Técnico & BDD",
+    "p2_b2": "UAZ Lenguas Extranjeras",
+    "p3_b1": "Visión por Computadora (IA) & Mobile",
+    "p3_tag9": "Control Fitosanitario",
+    "p4_b1": "Fundamentos de Ciencias de la Computación",
+    "p4_b2": "Java Puro • Algoritmos a Bajo Nivel • Sin Librerías",
+    "p4_tag1": "Algoritmo de Dijkstra",
+    "p4_tag2": "Árboles de Búsqueda Binaria",
+    "p4_tag3": "Teoría de Grafos",
+    "p4_tag4": "Montículos / Heaps",
+    "p4_tag5": "Compiladores & Parsers",
+    "p4_tag6": "Procesamiento WAV",
+    "p4_tag7": "Matrices 2D/3D",
+    "p4_tag8": "Modelos Ocultos de Markov",
+    "p5_b1": "Líder de Calidad (QA Lead) & Colaborador",
+    "p5_b2": "Procedimientos IV&V • Auditorías • Kotlin",
+    "p5_tag1": "Liderazgo de Calidad",
+    "p5_tag2": "Procedimientos IV&V",
+    "p5_tag3": "Auditorías Técnicas",
+    "p5_tag4": "Revisiones de Diseño (Peer Reviews)",
+    "p6_b1": "DevOps & Observabilidad Cloud",
+    "p6_b2": "Despliegue en AWS • Trabajo Colaborativo en Servidor",
+    "p7_b1": "Orquestación Docker Avanzada",
+    "p7_b2": "Malla Políglota de 4 Stacks • Redes Aisladas",
+    "edu_lang_footer": "Capacidad para trabajar en equipos multidisciplinarios bajo metodologías ágiles (Scrum).",
+    "contact_btn_gh": "Ver GitHub (@YairRT45)"
+  },
+  "en": {
+    "nav_exp": "Experience",
+    "nav_skills": "Skills",
+    "nav_projects": "Projects",
+    "nav_edu": "Education",
+    "nav_contact": "Contact",
+    "hero_badge": "Software Engineer | <strong class=\"text-brand-400\">Backend</strong> & <strong class=\"text-accent-400\">Junior DevOps</strong>",
+    "hero_p1": "Specialized in <strong class=\"text-white\">backend development (Python / Django / FastAPI)</strong> and <strong class=\"text-white\">DevOps practices</strong> (Docker, Linux, CI/CD). Solid foundations in <span class=\"text-indigo-400 font-mono text-sm font-medium\">Computer Science</span> (data structures, algorithms, and graphs), enterprise platforms, <span class=\"text-emerald-400 font-mono text-sm font-medium\">Computer Vision (YOLO)</span> pipelines, and observability with <span class=\"text-accent-400 font-mono text-sm font-medium\">Prometheus/Grafana</span>.",
+    "hero_p2": "Proven ability to digitize critical operating processes in high-stakes industrial environments (such as <strong class=\"text-slate-200\">Grupo Modelo / Compañía Cervecera de Zacatecas</strong>) and rigorous academic projects.",
+    "hero_loc": "Pozo de Gamboa, Zacatecas, Mexico",
+    "hero_langs": "English B1 | Native Spanish",
+    "hero_btn_contact": "Direct Contact",
+    "hero_btn_cv": "Download CV",
+    "hero_btn_copy": "Copy Email",
+    "hero_copied": "Copied!",
+    "term_comment": "# Candidate Profile",
+    "term_cat": "$ cat profile.json",
+    "term_title": "\"title\":",
+    "term_title_val": "\"Software Engineer | Backend & DevOps\"",
+    "term_status_cmd": "$ systemctl status engineering-stack",
+    "term_st1": "● backend.service - active [Django 5, FastAPI & DRF]",
+    "term_st2": "● mobile-apps - active [Flutter/Dart Phytosanitary & Kotlin/Room]",
+    "term_st3": "● docker-compose - polyglot mesh [Postgres, Mongo, MariaDB]",
+    "term_st4": "● jenkins-ci - pipeline passing [Behave BDD + Selenium]",
+    "term_st5": "● prometheus-grafana - live telemetry [cAdvisor + Node]",
+    "spec_b_sub": "Backend & REST APIs",
+    "spec_d_sub": "Containers & Bash",
+    "spec_o_sub": "Observability & Alerts",
+    "spec_q_sub": "Behave & Quality",
+    "exp_badge": "Proven Track Record",
+    "exp_title": "Professional Experience",
+    "exp_desc": "Measurable impact across the brewing industry, university projects, and manufacturing.",
+    "job1_role": "Web Developer / Software Consultant",
+    "job1_company": "Compañía Cervecera de Zacatecas (Grupo Modelo / AB InBev)",
+    "job1_date": "Aug 2026 – Oct 2026",
+    "job1_desc1": "<strong class=\"text-white\">Architected and deployed a centralized web platform</strong> for tool auditing and compliance of Good Operating Practices (GOPs) in packaging maintenance.",
+    "job1_desc2": "<strong class=\"text-white\">Eliminated manual inspection paper lag</strong> by digitizing audit workflows and automated action-plan generation across brewery packaging lines.",
+    "job1_desc3": "<strong class=\"text-white\">Engineered relational data models</strong> on PostgreSQL and robust user interfaces on Django, ensuring strict traceability for industrial operations.",
+    "job1_desc4": "Analyzed plant KPIs (<strong>MTTR</strong> - Mean Time To Repair and <strong>LEF</strong> - Line Efficiency), integrating automated SharePoint and Power BI analytical pipelines.",
+    "job2_role": "Technical Lead & Backend Developer",
+    "job2_company": "Universidad Autónoma de Zacatecas — Licenciatura en Lenguas Extranjeras",
+    "job2_date": "Nov 2025 – May 2026",
+    "job2_desc1": "<strong class=\"text-white\">Led end-to-end development</strong> of the academic management web platform using Python and Django.",
+    "job2_desc2": "<strong class=\"text-white\">Coordinated agile sprint planning</strong>, requirements delegation, and system deployment across Debian Linux servers.",
+    "job2_desc3": "<strong class=\"text-white\">Implemented BDD acceptance testing with Behave</strong> (Behavior-Driven Development), ensuring critical user flows were verified before production release.",
+    "job2_desc4": "Automated continuous deployment via <strong>SSH to remote AWS EC2 instances</strong> with zero-downtime rollback mechanics (<code>IMAGE_VERSION_OLD</code>).",
+    "job3_role": "Quality Assurance Lead (QA Lead) & Android Developer",
+    "job3_company": "MovilSecure (4Nodos Collaborative Project)",
+    "job3_date": "Oct 2025 – Nov 2025",
+    "job3_desc1": "Formulated and led <strong>Independent Verification and Validation (IV&V)</strong> strategies, technical audits, and requirements traceability matrices.",
+    "job3_desc2": "Conducted formal design and code reviews, establishing strict acceptance gates prior to merging into protected branches.",
+    "job3_desc3": "Contributed to native <strong>Kotlin (MVVM)</strong> development, local offline storage via <strong>Room DB</strong>, and <strong>Google Maps API</strong> integration for medical emergency routing.",
+    "job4_role": "Quality Assurance (QA) Inspector",
+    "job4_company": "Nagakura Engineering Works",
+    "job4_date": "Apr 2021 – Jul 2022",
+    "job4_desc1": "<strong class=\"text-white\">Supervised and executed precision inspection protocols</strong> for dimensional and material tolerances in manufacturing.",
+    "job4_desc2": "<strong class=\"text-white\">Detected and contained assembly line defects</strong>, authoring formal non-conformance reports and Root Cause Analyses (RCA) for corrective action.",
+    "job4_desc3": "<strong class=\"text-white\">Enforced strict quality standards</strong> and audited technical design specification revisions for raw materials.",
+    "skills_badge": "Technical Skills & Foundations",
+    "skills_title": "Skills, Technologies & CS Foundations",
+    "skills_desc": "Pure computer science, backend architecture, cloud infrastructure, observability, and artificial intelligence.",
+    "sk_c1_title": "Backend & RESTful APIs",
+    "sk_c1_desc": "Robust server-side logic, microservices, and async APIs.",
+    "sk_c2_title": "DevOps & Cloud",
+    "sk_c2_desc": "Isolated environments, CI/CD pipelines, and secure cloud deployments.",
+    "sk_c3_title": "Observability & SRE",
+    "sk_c3_desc": "Continuous monitoring of hosts, containers, and distributed microservices.",
+    "sk_c4_title": "CS Foundations & Algorithms",
+    "sk_c4_desc": "Low-level memory data structures and algorithms in pure Java.",
+    "sk_c5_title": "AI & Computer Vision",
+    "sk_c5_desc": "Supervised deep learning training and data pipelines.",
+    "sk_c6_title": "Cryptography & Security",
+    "sk_c6_desc": "Asymmetric cryptosystems, stream ciphers, and cryptanalysis.",
+    "sk_c7_title": "Databases (SQL & NoSQL)",
+    "sk_c7_desc": "Relational modeling, secure persistence, and query optimization.",
+    "sk_c8_title": "QA, Testing & PSP Discipline",
+    "sk_c8_desc": "Strict quality assurance, automated validation, and continuous testing.",
+    "sk_c9_title": "Mobile & Cross-Platform",
+    "sk_c9_desc": "Native and cross-platform mobile apps with automated CI/CD.",
+    "proj_badge": "Real-World Implementations",
+    "proj_title": "Engineering Projects",
+    "proj_desc": "Enterprise applications, infrastructure automation, and pipelines.",
+    "p1_title": "Web Platform for Auditing & Good Operating Practices (GOPs)",
+    "p1_sub": "Django 5.0 + PostgreSQL 16 Web Platform Deployed with Docker Compose for Industrial Manufacturing",
+    "p1_desc": "Enterprise web platform developed for <strong>Compañía Cervecera de Zacatecas (Grupo Modelo / AB InBev)</strong> to centralize and audit Good Operating Practices (GOPs), tooling traceability, and failure monitoring in the Packaging Department. Replaced manual paperwork with a structured digital workflow with role-based permissions.",
+    "p1_f1_title": "Plant Operations Management",
+    "p1_f1_desc": "Dynamic production line checklists, real-time incident logging, and automated corrective action plan tracking.",
+    "p1_f2_title": "Django 5 & PostgreSQL Backend",
+    "p1_f2_desc": "Normalized relational ORM architecture, custom business validation logic, and a streamlined administrative dashboard for floor supervisors.",
+    "p1_f3_title": "Multi-Container Deployment",
+    "p1_f3_desc": "Reproducible Docker Compose environment with persistent storage volumes and isolated network security.",
+    "p2_title": "Academic Management Platform with Jenkins CI/CD & BDD Testing",
+    "p2_sub": "Django 4.x + MariaDB Stack with Behave / Firefox Headless Automated Testing and AWS EC2 SSH Deployment",
+    "p2_desc": "Curriculum management and tracking system for the <strong>Licenciatura en Lenguas Extranjeras (UAZ)</strong>. Built with a rigorous <strong>DevOps and QA Automation</strong> workflow: declarative Jenkins pipeline executing Flake8 static analysis, unit testing, and behavior-driven UI automation with a real headless browser before deploying to production.",
+    "p2_f1_title": "Declarative Jenkins Pipeline",
+    "p2_f1_desc": "Complete CI/CD automation: strict linting, test suites, semantic versioning, and secure pushes to a private Docker registry at <code>registry.roman-mx.tech</code>.",
+    "p2_f2_title": "BDD Testing with Selenium",
+    "p2_f2_desc": "Behave acceptance testing in Gherkin syntax running against a Firefox Headless container to validate end-to-end user journeys.",
+    "p2_f3_title": "Continuous Deployment to AWS",
+    "p2_f3_desc": "Automated SSH deployment to AWS EC2 instances featuring dynamic version rollbacks for zero-downtime releases.",
+    "p3_title": "Doctor Chile: AI Crop Pathology Detection System (YOLO) & Mobile App (Flutter)",
+    "p3_sub": "Full Deep Learning Pipeline (PyTorch & Ultralytics YOLOv8), AgML Curation, and Offline Flutter Client with SQLite FFI",
+    "p3_desc": "Comprehensive <strong>Computer Vision</strong> and mobile solution for phytosanitary diagnosis and pest control in chili crops. Spans the complete lifecycle from data engineering and supervised training of <strong>YOLO (v5/v8) models in PyTorch</strong> across 5 foliar pathologies, to field inference via an offline-first <strong>Flutter & Dart</strong> mobile client using SQLite FFI with automated quality gates in <strong>GitHub Actions</strong>.",
+    "p3_f1_title": "AI & Deep Learning Pipeline",
+    "p3_f1_desc": "AgML dataset curation and balancing, negative sample generation, visual attention heatmaps, and supervised training with Ultralytics YOLOv8 and PyTorch.",
+    "p3_f2_title": "Flutter Client & SQLite FFI",
+    "p3_f2_desc": "Responsive UI for field diagnosis, pathology catalogue, and offline local storage backed by native C/Linux bindings (<code>libsqlite3-dev</code>) for rural agricultural areas.",
+    "p3_f3_title": "CI/CD & Model Exporting",
+    "p3_f3_desc": "GitHub Actions workflow running on Ubuntu Runners with strict linting (<code>flutter analyze --fatal-infos</code>), unit tests, and model weight export scripts.",
+    "p4_title": "Core Data Structures Engine, Dijkstra's Algorithm & Syntax Compiler",
+    "p4_sub": "Hand-coded Graphs, Binary Trees, Stack-based Syntax Parser, and Binary Audio/Image Processing in Pure Java",
+    "p4_desc": "Core <strong>Computer Science</strong> architecture built in <strong>pure Java at the low memory level</strong>, completely independent of JDK collections. Encompasses custom dynamic and non-linear data structures, shortest-path graph optimization via <strong>Dijkstra's Algorithm</strong>, syntax tree evaluation with Infix/Postfix conversion, compiler-like syntax verification, and byte-level manipulation of RIFF WAV audio and multidimensional matrix tensors.",
+    "p4_f1_title": "Graphs, Dijkstra & Trees",
+    "p4_f1_desc": "Dynamic and static graph modeling with <strong>Dijkstra's shortest path</strong>, Binary Search Trees (BST), Heaps/Priority Queues, and Arithmetic Expression Trees.",
+    "p4_f2_title": "Compiler & Syntax Parser",
+    "p4_f2_desc": "Stack-driven syntax validator for nested delimiter balancing, lexical error localization by line and column, and expression parsing.",
+    "p4_f3_title": "3D Tensors & Binary Audio",
+    "p4_f3_desc": "Byte-level decoding and processing of <code>.wav</code> audio samples; 2D/3D matrix algebra engine for convolutions, grayscale, and geometric image transformations.",
+    "p5_title": "MovilSecure: QA Leadership (IV&V) & Medical Route Mapping App",
+    "p5_sub": "Native Kotlin Android App + Room DB + Google Maps API Developed under Formal Quality Assurance Standards",
+    "p5_desc": "Mobile health and safety monitoring system for elderly patients and caregivers. As <strong>Quality Assurance Lead (QA Lead)</strong>, I established and directed <strong>Independent Verification and Validation (IV&V)</strong> protocols, requirements traceability, and acceptance criteria, while developing core MVVM UI and data persistence modules.",
+    "p5_f1_title": "IV&V Quality Leadership",
+    "p5_f1_desc": "Traceability matrices, functional acceptance test plans, and rigorous technical review of pull requests from the development team.",
+    "p5_f2_title": "Android MVVM Architecture",
+    "p5_f2_desc": "Clean Model-View-ViewModel design pattern in Kotlin using ViewModel, LiveData, and modular separation of concerns.",
+    "p5_f3_title": "Room DB & Google Maps API",
+    "p5_f3_desc": "Local offline persistence for emergency contacts and dynamic real-time routing to medical centers.",
+    "p6_title": "End-to-End Cloud Observability, Telemetry & Alerting Stack",
+    "p6_sub": "Real-Time Monitoring with Prometheus, Grafana, Alertmanager, Exporters & Nginx Proxy Manager on AWS EC2",
+    "p6_desc": "Comprehensive distributed monitoring infrastructure deployed on <strong>AWS EC2</strong> with Docker Compose. Engineered to provide end-to-end observability into host server health, microservices containers, and relational databases with real-time metrics and proactive alerting rules.",
+    "p6_f1_title": "Multi-Exporter Ingestion",
+    "p6_f1_desc": "Node Exporter (host metrics), cAdvisor (container telemetry), MariaDB Exporter, and Blackbox Exporter for synthetic HTTP latency probes.",
+    "p6_f2_title": "Grafana Dashboards",
+    "p6_f2_desc": "Centralized visualization of CPU loads, RAM saturation, disk I/O, network traffic, and real-time service health.",
+    "p6_f3_title": "Alerting with Alertmanager",
+    "p6_f3_desc": "Custom PromQL alerting rules for proactive incident notification, resource saturation detection, and service outage management.",
+    "p7_title": "Polyglot Microservices Orchestration with Docker Compose & Nginx Proxy Manager",
+    "p7_sub": "Heterogeneous Mesh: FastAPI + Spring Boot + Laravel 8 + React Admin with Isolated Networks and Active Healthchecks",
+    "p7_desc": "Multi-stack infrastructure orchestrating 4 distinct technologies communicating securely within a Docker cluster. Features network segmentation (isolated private backend network and public frontend network), active health probes for deterministic startup sequencing, and reverse proxy administration.",
+    "p7_f1_title": "Multi-Language Architecture",
+    "p7_f1_desc": "FastAPI (Python) + PostgreSQL 15, Spring Boot (Java) + MongoDB 6, Laravel 8 (PHP) + MySQL 8.0, and React Admin consuming the FastAPI endpoints.",
+    "p7_f2_title": "Network Segmentation",
+    "p7_f2_desc": "Private <code>backend</code> network isolated from external traffic for databases and public <code>frontend</code> network for exposed web services.",
+    "p7_f3_title": "Healthchecks & Sequencing",
+    "p7_f3_desc": "Active health checks using <code>pg_isready</code> and <code>mongosh</code> to ensure databases are fully initialized prior to starting web applications.",
+    "edu_badge": "Academic Background",
+    "edu_title": "Education & Languages",
+    "edu_deg_title": "B.S. in Software Engineering",
+    "edu_deg_school": "Universidad Autónoma de Zacatecas (UAZ)",
+    "edu_deg_period": "2022 — Present (In Progress)",
+    "edu_deg_desc": "Comprehensive education focused on the software lifecycle, robust architectures, relational database management, networking, operating systems, and requirements engineering.",
+    "edu_lang_badge": "Languages",
+    "edu_lang_es_title": "Spanish",
+    "edu_lang_es_desc": "Maternal Language",
+    "edu_lang_es_level": "Native",
+    "edu_lang_en_title": "English",
+    "edu_lang_en_desc": "Technical reading and communication",
+    "edu_lang_en_level": "B1 Level",
+    "edu_deg_bullet1": "Comprehensive training in Computer Science, Algorithms, Data Structures, Software Architecture, Networking, and Formal Quality Methodologies (PSP/SEI).",
+    "edu_deg_bullet2": "Strong academic record; active participation in institutional software development projects and quality assurance audits.",
+    "edu_lang_title": "Language Proficiency",
+    "edu_lang_es": "Spanish: Native (maternal language)",
+    "edu_lang_en": "English: Intermediate Technical B1/B2 (fluent reading/writing of RFCs, technical documentation, code reviews, and commit messages; professional conversational competence).",
+    "contact_badge": "Professional Contact",
+    "contact_title": "Looking to add a Software Engineer to your team?",
+    "contact_desc": "I am available for <strong class=\"text-brand-400\">Junior Backend Developer</strong> or <strong class=\"text-accent-400\">Junior DevOps Engineer</strong> roles (remote, hybrid, or on-site). Let's connect on how I can deliver immediate technical value to your systems and infrastructure.",
+    "contact_c1_title": "Email Address",
+    "contact_c2_title": "Direct Phone",
+    "contact_c3_title": "Official LinkedIn",
+    "contact_btn_send": "Send Email",
+    "contact_btn_cv": "Download Resume (PDF)",
+    "footer_copy": "© 2026 Ramiro Yair Román Trejo. Professional Web Portfolio.",
+    "footer_top": "Back to top ↑",
+    "contact_location_footer": "Pozo de Gamboa, Zacatecas, Mexico • Open to Relocation or Remote",
+    "sk_c1_i1": "Python 3.x (OOP & Concurrency)",
+    "sk_c1_i2": "Django 5.x & Django ORM",
+    "sk_c1_i3": "Django REST Framework (DRF)",
+    "sk_c1_i4": "FastAPI (Async & Microservices)",
+    "sk_c1_i5": "MVC / RESTful Architecture",
+    "sk_c1_i6": "Spring Boot (Java) & Laravel 8",
+    "sk_c2_i1": "Docker & Docker Compose (Multi-stack)",
+    "sk_c2_i2": "Linux (Ubuntu Server & Bash Scripting)",
+    "sk_c2_i3": "GitHub Actions & Jenkins CI/CD",
+    "sk_c2_i4": "Remote SSH Deployment on AWS EC2",
+    "sk_c2_i5": "Nginx Proxy Manager & SSL (Let's Encrypt)",
+    "sk_c2_i6": "Private Authenticated Docker Registries",
+    "sk_c3_i1": "Prometheus & Alertmanager",
+    "sk_c3_i2": "Real-Time Grafana Dashboards",
+    "sk_c3_i3": "Node Exporter (CPU, RAM, Disk, Network)",
+    "sk_c3_i4": "cAdvisor (Container Telemetry)",
+    "sk_c3_i5": "Blackbox Exporter (Synthetic HTTP Probes)",
+    "sk_c3_i6": "PromQL Alerting Rules",
+    "sk_c4_i1": "Binary Trees, BST & Binary Heaps",
+    "sk_c4_i2": "Directed Graphs & Dijkstra's Algorithm",
+    "sk_c4_i3": "Stack-Based Syntax Parser & Compiler",
+    "sk_c4_i4": "Expression Trees (Infix / Postfix)",
+    "sk_c4_i5": "Binary Audio Signal Processing (.wav)",
+    "sk_c4_i6": "2D/3D Matrices & Image Linear Algebra",
+    "sk_c5_i1": "Ultralytics YOLOv8 & YOLOv5",
+    "sk_c5_i2": "PyTorch (Deep Learning & Tensors)",
+    "sk_c5_i3": "Large-Scale Dataset Curation with AgML",
+    "sk_c5_i4": "Visual Attention Heatmaps",
+    "sk_c5_i5": "Optimized Model Export for Inference",
+    "sk_c5_i6": "Hidden Markov Models (HMM)",
+    "sk_c6_i1": "Asymmetric RSA Cryptosystem (TCP Sockets)",
+    "sk_c6_i2": "RC4 Stream Cipher Implementation",
+    "sk_c6_i3": "Substitution Ciphers (Alberti Disk / Caesar)",
+    "sk_c6_i4": "Shannon Entropy & Hamming Distance",
+    "sk_c6_i5": "Subkey Scheduling & Cryptographic Hashing",
+    "sk_c6_i6": "Sieve of Eratosthenes Prime Generation",
+    "sk_c7_i1": "PostgreSQL 15/16 (psycopg3)",
+    "sk_c7_i2": "MariaDB & MySQL 8.0",
+    "sk_c7_i3": "MongoDB 6 (NoSQL Document Store)",
+    "sk_c7_i4": "SQLite & Room Database (Android ORM)",
+    "sk_c7_i5": "Oracle PL/SQL (Triggers & Stored Procedures)",
+    "sk_c7_i6": "Healthchecks (<code>pg_isready</code>, <code>mongosh</code>)",
+    "sk_c8_i1": "PSP Methodology (Watts Humphrey / SEI)",
+    "sk_c8_i2": "IV&V Procedures (Verification & Validation)",
+    "sk_c8_i3": "BDD Testing with Behave (Gherkin)",
+    "sk_c8_i4": "Selenium WebDriver (Headless E2E in CI)",
+    "sk_c8_i5": "Unit Testing (pytest & unittest)",
+    "sk_c8_i6": "Flake8 Linters, RCA & Agile Methodologies",
+    "sk_c9_i1": "Flutter & Dart (Cross-Platform Apps)",
+    "sk_c9_i2": "Phytosanitary Control & Crop Diagnostics",
+    "sk_c9_i3": "SQLite FFI on Linux & Mobile Devices",
+    "sk_c9_i4": "Native Kotlin (Android Jetpack & MVVM)",
+    "sk_c9_i5": "Room Database (Offline-First Persistence)",
+    "sk_c9_i6": "Google Maps API & Critical Route Tracking",
+    "nav_btn_contact": "Contact",
+    "term_k_name": "\"name\":",
+    "term_k_title": "\"role\":",
+    "term_k_uni": "\"university\":",
+    "term_v_uni": "\"UAZ (2022 - Present)\"",
+    "term_k_phone": "\"phone\":",
+    "term_val_prop": "\"Secure and traceable backend development, reproducible Linux deployments, and real-time observability for production environments.\"",
+    "job1_badge": "Industry / Manufacturing",
+    "job1_tag5": "GOP Traceability",
+    "job2_badge": "Leadership & Development",
+    "job2_tag1": "Agile Leadership / Scrum",
+    "job2_tag3": "Linux Servers",
+    "job2_tag5": "Software Quality",
+    "job4_badge": "Quality Assurance (QA)",
+    "job4_tag1": "Root Cause Analysis (RCA)",
+    "job4_tag2": "Non-Conformances",
+    "job4_tag3": "Technical Auditing",
+    "job4_tag4": "Critical Tolerances",
+    "proj_explore_gh": "Explore repositories on GitHub",
+    "p1_b1": "Production Case Study",
+    "p1_tag6": "Industrial Auditing",
+    "p2_b1": "Technical Lead & BDD",
+    "p2_b2": "UAZ Lenguas Extranjeras",
+    "p3_b1": "Computer Vision (AI) & Mobile",
+    "p3_tag9": "Phytosanitary Control",
+    "p4_b1": "Computer Science Foundations",
+    "p4_b2": "Pure Java • Low-Level Algorithms • Zero External Libs",
+    "p4_tag1": "Dijkstra's Algorithm",
+    "p4_tag2": "Binary Search Trees",
+    "p4_tag3": "Graph Theory",
+    "p4_tag4": "Binary Heaps",
+    "p4_tag5": "Compilers & Parsers",
+    "p4_tag6": "WAV Signal Processing",
+    "p4_tag7": "2D/3D Matrices",
+    "p4_tag8": "Hidden Markov Models",
+    "p5_b1": "QA Lead & Mobile Contributor",
+    "p5_b2": "IV&V Procedures • Code Audits • Kotlin",
+    "p5_tag1": "Quality Leadership",
+    "p5_tag2": "IV&V Procedures",
+    "p5_tag3": "Technical Audits",
+    "p5_tag4": "Design & Code Peer Reviews",
+    "p6_b1": "Cloud DevOps & Observability",
+    "p6_b2": "AWS Deployment • Collaborative Server Engineering",
+    "p7_b1": "Advanced Docker Orchestration",
+    "p7_b2": "4-Stack Polyglot Mesh • Isolated Networks",
+    "edu_lang_footer": "Proven ability to collaborate in cross-functional teams under Agile/Scrum methodologies.",
+    "contact_btn_gh": "View GitHub (@YairRT45)"
+  }
+};
+
+function setLanguage(lang) {
+  if (!i18n[lang]) return;
+
+  const currentLang = lang;
+  document.documentElement.lang = currentLang;
+  try {
+    localStorage.setItem('preferred_lang', currentLang);
+  } catch (e) {
+    console.warn('localStorage not accessible:', e);
+  }
+
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[currentLang] && i18n[currentLang][key] !== undefined) {
+      el.innerHTML = i18n[currentLang][key];
+    }
+  });
+
+  // Update CV download buttons dynamically
+  const cvButtons = document.querySelectorAll('a[download]');
+  cvButtons.forEach(btn => {
+    if (currentLang === 'en') {
+      btn.setAttribute('href', 'CV_Ramiro_Yair_Roman_Trejo_EN.pdf');
+      btn.setAttribute('download', 'CV_Ramiro_Yair_Roman_Trejo_EN.pdf');
+    } else {
+      btn.setAttribute('href', 'CV_Ramiro_Yair_Roman_Trejo.pdf');
+      btn.setAttribute('download', 'CV_Ramiro_Yair_Roman_Trejo.pdf');
+    }
+  });
+
+  // Update button active styles
+  const btnEs = document.getElementById('lang-es');
+  const btnEn = document.getElementById('lang-en');
+
+  if (btnEs && btnEn) {
+    if (currentLang === 'es') {
+      btnEs.className = "cursor-pointer px-2 py-1 rounded text-brand-400 font-bold bg-dark-800 transition-all";
+      btnEn.className = "cursor-pointer px-2 py-1 rounded text-slate-400 hover:text-white transition-all";
+    } else {
+      btnEn.className = "cursor-pointer px-2 py-1 rounded text-brand-400 font-bold bg-dark-800 transition-all";
+      btnEs.className = "cursor-pointer px-2 py-1 rounded text-slate-400 hover:text-white transition-all";
+    }
+  }
+
+  // Re-render Lucide icons if any were injected
+  if (window.lucide && typeof lucide.createIcons === 'function') {
+    lucide.createIcons();
+  }
+}
+
+// Auto-initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+  let savedLang = null;
+  try {
+    savedLang = localStorage.getItem('preferred_lang');
+  } catch(e) {}
+  const browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+  const defaultLang = savedLang || (browserLang.startsWith('en') ? 'en' : 'es');
+  setLanguage(defaultLang);
+});
+
+</script>
+</body>
+</html>
